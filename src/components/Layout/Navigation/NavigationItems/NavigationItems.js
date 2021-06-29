@@ -26,9 +26,6 @@ const NavigationItems = () => {
             <li className={ navItemStatus? classes.ActiveNavigationItem : classes.DeactiveNavigationItem}>
                 <a href="/">About us</a>
             </li>
-            <li className={navItemStatus? classes.ActiveNavigationItem : classes.DeactiveNavigationItem}>
-                <a href="/">Contacts</a>
-            </li>
         </ul>
     )
 }

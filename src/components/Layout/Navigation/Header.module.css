@@ -19,3 +19,10 @@
     color: #fff;
     z-index: 20;
 }
+
+
+.NavLogo{
+    width: 64px;
+    height: 64px;
+    margin:  10px 330px 0 370px;
+}
