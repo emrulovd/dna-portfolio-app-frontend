@@ -1,6 +1,7 @@
-import React, {useState} from 'react';
+import React, {useState, Fragment} from 'react';
 
-import logoWhite from '../../../assets/dna-black-logo-symbol.png';
+import logoBlack from '../../../assets/dna-black-logo-symbol.png';
+import logoWhite from '../../../assets/dna-code-symbol.png'
 
 import classes from './Header.module.css'
 import NavigationItems from './NavigationItems/NavigationItems';
@@ -9,27 +10,34 @@ import DynamicNavigationItems from './DynamicNavigationItems/DynamicNavigationIt
 
 const Header = () => {
     const [navbarStatus, setNavbarStatus] = useState(false);
+    let [logoSymbol, setLogoSymbol] = useState(logoBlack);
 
     const changeNavabarStatus = () => {
         if(window.scrollY >= 80){
             setNavbarStatus(true);
+            setLogoSymbol(logoWhite);
         }else{
             setNavbarStatus(false);
+            setLogoSymbol(logoBlack);
         }
     }
 
     window.addEventListener('scroll', changeNavabarStatus);
 
     return(
-        <header className={ navbarStatus ? classes.Active : classes.Deactive}>
-            <nav>
-                <DynamicNavigationItems/>
-            </nav>
-                <img className={classes.NavLogo} src={logoWhite} alt="..." />
-            <nav>
-                <NavigationItems/>
-            </nav>
-        </header>
+        <Fragment>
+            <header className={ navbarStatus ? classes.Active : classes.Deactive}>
+                <nav>
+                    <DynamicNavigationItems/>
+                </nav>
+                    <div className={navbarStatus? classes.LogoActive : null}>
+                        <img className={classes.NavLogo} src={logoSymbol} alt="..." />
+                    </div>
+                <nav>
+                    <NavigationItems/>
+                </nav>
+            </header>
+        </Fragment>
     )
 }
 

@@ -53,7 +53,7 @@
 .ActiveDynamicNavigationItem a{
    transition: all 1s;
     text-decoration: none;
-    color: #000;
+    color: #fff;
     height: 100%;
     padding: 16px;
     font-size: 15px;

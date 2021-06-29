@@ -22,7 +22,15 @@
 
 
 .NavLogo{
-    width: 64px;
-    height: 64px;
-    margin:  10px 330px 0 370px;
+    transition: all 1s;
+    width: 54px;
+    height: 54px;
+    margin:  5px 330px 0 370px;
+}
+
+
+.LogoActive{
+    transition: all 1s;
+    /* border: 1px solid #000; */
+    /* background: #000; */
 }

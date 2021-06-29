@@ -1,0 +1,9 @@
+.Cockpit{
+    height: 100vh;
+    width: 100%;
+}
+
+
+.Cockpit video{
+    width: 100%;
+}
