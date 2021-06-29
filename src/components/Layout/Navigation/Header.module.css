@@ -1,0 +1,21 @@
+.Deactive{
+    transition: all 1s;
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    background: transparent;
+    display: flex; 
+    z-index: 20;
+    color: #000;
+}
+
+.Active{
+    transition: all 1s;
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    background: #000;
+    display: flex;
+    color: #fff;
+    z-index: 20;
+}

@@ -1,10 +1,13 @@
+import React, { Fragment } from 'react'; 
+
 import './App.css';
+import Header from './components/Layout/Navigation/Header';
 
 function App() {
   return (
-    <div>
-        <h1>DNA code</h1>
-    </div>
+    <Fragment>
+      <Header/>
+    </Fragment>
   );
 }
 
