@@ -2,10 +2,6 @@
 
 ## Folder structure 
 
-The app has components folder where it stores all the components.
-The components are splitted into 3 groups (Admin, Users and UI).
-Admin's folder contains all components related to the admin panel.
-The Users folder will store components used by the normal users of the app.The UI folder will store all UI elements such as buttons, inputs, modals, etc. 
 
 
 
