@@ -30,9 +30,7 @@ const Header = () => {
                 <nav>
                     <DynamicNavigationItems/>
                 </nav>
-                    <div className={navbarStatus? classes.LogoActive : null}>
-                        <img className={classes.NavLogo} src={logoSymbol} alt="..." />
-                    </div>
+                    <img className={classes.NavLogo} src={logoSymbol} alt="..." />
                 <nav>
                     <NavigationItems/>
                 </nav>
