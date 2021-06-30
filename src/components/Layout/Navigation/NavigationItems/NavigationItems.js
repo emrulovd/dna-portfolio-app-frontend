@@ -18,13 +18,31 @@ const NavigationItems = () => {
     return(
         <ul className={classes.NavigationItems}>
             <li className={navItemStatus? classes.ActiveNavigationItem : classes.DeactiveNavigationItem}>
-                <a href="/">Home</a>
+                <a href="/">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Home
+                </a>
             </li>
             <li className={navItemStatus? classes.ActiveNavigationItem : classes.DeactiveNavigationItem}>
-                <a href="/">Services</a>
+                <a href="/">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Services
+                </a>
             </li>
             <li className={ navItemStatus? classes.ActiveNavigationItem : classes.DeactiveNavigationItem}>
-                <a href="/">About us</a>
+                <a href="/">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    About us
+                </a>
             </li>
         </ul>
     )

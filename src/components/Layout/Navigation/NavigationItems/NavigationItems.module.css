@@ -9,7 +9,6 @@
 
 .DeactiveNavigationItem{
     margin: 0;
-    /* box-sizing: border-box; */
     display: flex;
     height: 100%;
     align-items: center;
@@ -26,8 +25,10 @@
     text-transform: uppercase;
     border-bottom: 4px solid transparent;
     box-sizing: border-box;
-    display: flex;
-    font-weight: bold;
+    display: inline-block;
+    position: relative;
+    margin: 5px 5px 0 0;
+    overflow: hidden;
 }
 
 
@@ -35,9 +36,75 @@
 .DeactiveNavigationItem a:active,
 .DeactiveNavigationItem a.active{
     transition: 0.3s;
-  
+    text-decoration: none;
+    color: #fff;
+    background: #000;
+    box-shadow: 0 0 10px #000, 0 0 40px #000, 0 0 80px #000;
+    transition-delay: 1s;
 }
 
+.DeactiveNavigationItem a span{
+    position: absolute;
+    display: block;
+}
+
+.DeactiveNavigationItem a span:nth-child(1){
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #000)
+}
+
+.DeactiveNavigationItem a:hover span:nth-child(1){
+    left: 100%;
+    transition: 1s;
+}
+
+
+.DeactiveNavigationItem a span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #000)
+}
+
+.DeactiveNavigationItem a:hover span:nth-child(3){
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+
+
+.DeactiveNavigationItem a span:nth-child(2){
+    top: -200%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #000)
+}
+
+.DeactiveNavigationItem a:hover span:nth-child(2){
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+
+
+.DeactiveNavigationItem a span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #000)
+}
+
+.DeactiveNavigationItem a:hover span:nth-child(4){
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
 
 
 
@@ -51,7 +118,7 @@
 }
 
 .ActiveNavigationItem a{
-   transition: all 1s;
+    transition: all 1s;
     text-decoration: none;
     color: #fff;
     height: 100%;
@@ -61,13 +128,84 @@
     text-transform: uppercase;
     border-bottom: 4px solid transparent;
     box-sizing: border-box;
-    display: flex;
-    font-weight: bold;
+    display: inline-block;
+    position: relative;
+    margin: 5px 5px 0 0;
+    overflow: hidden;
 }
 
 .ActiveNavigationItem a:hover,
 .ActiveNavigationItem a:active,
 .ActiveNavigationItem a.active{
     transition: 0.3s;
-   
+    text-decoration: none;
+    color: #000;
+    background: #fff;
+    box-shadow: 0 0 10px #fff, 0 0 40px #fff, 0 0 80px #fff;
+    transition-delay: 1s;
+}
+
+
+
+.ActiveNavigationItem a span{
+    position: absolute;
+    display: block;
+}
+
+.ActiveNavigationItem a span:nth-child(1){
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #fff)
+}
+
+.ActiveNavigationItem a:hover span:nth-child(1){
+    left: 100%;
+    transition: 1s;
+}
+
+
+.ActiveNavigationItem a span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #fff)
+}
+
+.ActiveNavigationItem a:hover span:nth-child(3){
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+
+
+.ActiveNavigationItem a span:nth-child(2){
+    top: -200%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #fff)
+}
+
+.ActiveNavigationItem a:hover span:nth-child(2){
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+
+
+.ActiveNavigationItem a span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #fff)
+}
+
+.ActiveNavigationItem a:hover span:nth-child(4){
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
 }
