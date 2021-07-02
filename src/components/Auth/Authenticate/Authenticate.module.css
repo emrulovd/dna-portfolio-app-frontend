@@ -1,0 +1,14 @@
+.Logo{
+    display: block;
+    margin: 80px auto 60px auto;
+    height: 128px;
+    width: 128px;
+}
+
+
+.Title{
+    color: #fff;
+    font-family: 'Audiowide', cursive;
+    text-align: center;
+    margin: 30px auto;
+}
