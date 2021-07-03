@@ -11,14 +11,16 @@ const Input = props => {
                 className={classes.InputElement}
                 type={props.type}
                 name={props.name}
-                ref={props.ref}/>;
+                ref={props.reff}
+                required/>;
                 break;
         default:
             inputElement = <input
             className={classes.InputElement}
             type={props.type}
             name={props.name}
-            ref={props.ref}/>;
+            ref={props.reff}
+            required/>;
             break;
     }
 

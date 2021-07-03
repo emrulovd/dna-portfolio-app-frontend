@@ -40,7 +40,8 @@
 
 /*.InputElement:valid + .Label*/
 
-.InputElement:focus + .Label {
+.InputElement:focus + .Label,
+.InputElement:valid + .Label {
     top: -35px;
     left: -0px;
 }
@@ -58,6 +59,7 @@
 }
 
 
-.InputElement:focus ~ .Line{
+.Input .InputElement:focus ~ .Line,
+.Input .InputElement:valid ~ .Line{
     height: 100%;
 }
