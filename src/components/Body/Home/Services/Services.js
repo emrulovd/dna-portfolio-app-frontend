@@ -9,7 +9,6 @@ const Services = () => {
             <Container fluid>
                 <Row>
                     <Col>
-                        <h1>Services</h1>
                     </Col>
                 </Row>
             </Container>
