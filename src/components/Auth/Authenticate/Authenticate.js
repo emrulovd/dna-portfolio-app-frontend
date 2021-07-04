@@ -1,17 +1,24 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useRef } from 'react';
 
-import logoBlack from '../../../assets/dna-black-logo-symbol.png';
+import logo from '../../../assets/dna-code-white.png';
 import classes from './Authenticate.module.css';
 
 import Card from '../../UI/Card/Card';
+import Input from '../../UI/Input/Input';
+import Button from '../../UI/Button/Button';
 
 const Authenticate = () => {
+    const usernameRef = useRef();
     return(
         <Fragment>
-            <img className={classes.Logo} src={logoBlack} alt=".."/>
-                <Card className={classes.CardDesign}>
-                    <h3 className={classes.Title}>Login</h3>
+            <div className={classes.Wrapper}>
+                <Card>
+                    <img className={classes.Logo} src={logo} alt=".."/>
+                    <Input elementType="input" name="username" reff={usernameRef} label="username" type="text" />
+                    <Input elementType="input" name="password" reff={usernameRef} label="password" type="password"/>
+                    <Button>Login</Button>
                 </Card>
+            </div>
         </Fragment>
     )
 }

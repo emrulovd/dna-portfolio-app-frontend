@@ -1,0 +1,65 @@
+.Input{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    color: #000;
+    height: 40px;
+    position: relative;
+    margin-bottom: 45px;
+}
+
+.Label {
+    font-family: 'Audiowide', cursive;
+    color: #fff;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 40px;
+    font-size: 18px;
+    padding: 0 10px;
+    display: block;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.InputElement{
+    position: absolute;
+    width: 93%;
+    height: 100%;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    padding: 0 10px;
+    z-index: 1;
+    color: #000;
+    overflow: hidden;
+}
+
+/*.InputElement:valid + .Label*/
+
+.InputElement:focus + .Label,
+.InputElement:valid + .Label {
+    top: -35px;
+    left: -0px;
+}
+
+.Line{
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 93%;
+    height: 2px;
+    background: #fff;
+    transition: 0.5s;
+    border-radius: 2px;
+    pointer-events: none;
+}
+
+
+.Input .InputElement:focus ~ .Line,
+.Input .InputElement:valid ~ .Line{
+    height: 100%;
+}
