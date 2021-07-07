@@ -41,7 +41,7 @@ const DynamicNavigationItems = () => {
                     <span></span>
                     <span></span>
                     <span></span>
-                    About us
+                    About
                 </a>
             </li>
         </ul>

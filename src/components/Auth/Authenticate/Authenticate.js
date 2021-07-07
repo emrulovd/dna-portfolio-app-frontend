@@ -11,33 +11,32 @@ const Authenticate = () => {
   const usernameInputRef = useRef();
   const passwordInputRef = useRef();
 
+
   const authenticateHandler = (event) => {
-    console.log(event)
     event.preventDefault();
-    console.log(usernameInputRef);
-    console.log(passwordInputRef);
+    
   };
 
   return (
     <div className={classes.Wrapper}>
       <Card>
         <img className={classes.Logo} src={logo} alt=".." />
-        <form onSubmit={(event) => authenticateHandler(event)}>
+        <form onSubmit={authenticateHandler}>
           <Input
             elementType="input"
             name="username"
-            reff={usernameInputRef}
+            inputRef={usernameInputRef}
             label="username"
-            type="text"
+            inputType="text"
           />
           <Input
             elementType="input"
             name="password"
-            reff={passwordInputRef}
+            inputRef={passwordInputRef}
             label="password"
-            type="password"
+            inputType="password"
           />
-          <Button type="submit" >Login</Button>
+          <Button buttonType="submit" >Login</Button>
         </form>
       </Card>
     </div>
