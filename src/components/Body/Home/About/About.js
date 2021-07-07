@@ -3,7 +3,7 @@ import Aos from 'aos';
 
 import { Container, Row, Col} from 'react-bootstrap';
 import classes from './About.module.css';
-import logo from '../../../../assets/dna-code-white.png'
+import video from '../../../../assets/dna-logo-animation.mp4';
 
 import Objectives from './Objectives/Objectives';
 
@@ -19,7 +19,7 @@ const About = () => {
                 <Row>
                     <Col sm={4}>
                         <div data-aos="zoom-in">
-                            <img className={classes.Logo} src={logo} alt='...'/>
+                            <video className={classes.Logo} autoPlay muted loop src={video} type="video/mp4"></video>
                         </div>
                     </Col>
                     <Col sm={7}>
