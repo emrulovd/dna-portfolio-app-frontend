@@ -23,7 +23,7 @@ const NavigationItems = () => {
                     <span></span>
                     <span></span>
                     <span></span>
-                    Home
+                    Portfolio
                 </a>
             </li>
             <li className={navItemStatus? classes.ActiveNavigationItem : classes.DeactiveNavigationItem}>
@@ -32,7 +32,7 @@ const NavigationItems = () => {
                     <span></span>
                     <span></span>
                     <span></span>
-                    Services
+                    Contact
                 </a>
             </li>
             <li className={ navItemStatus? classes.ActiveNavigationItem : classes.DeactiveNavigationItem}>

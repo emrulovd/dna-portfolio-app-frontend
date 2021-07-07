@@ -36,7 +36,7 @@ const DynamicNavigationItems = () => {
                 </a>
             </li>
             <li className={ navItemStatus? classes.ActiveDynamicNavigationItem : classes.DeactiveDynamicNavigationItem}>
-                <a href="/">
+                <a href="/about">
                     <span></span>
                     <span></span>
                     <span></span>
