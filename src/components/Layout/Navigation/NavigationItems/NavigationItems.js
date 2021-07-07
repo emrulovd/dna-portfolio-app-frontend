@@ -18,7 +18,7 @@ const NavigationItems = () => {
     return(
         <ul className={classes.NavigationItems}>
             <li className={navItemStatus? classes.ActiveNavigationItem : classes.DeactiveNavigationItem}>
-                <a href="/">
+                <a href="/portfolio">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -27,7 +27,7 @@ const NavigationItems = () => {
                 </a>
             </li>
             <li className={navItemStatus? classes.ActiveNavigationItem : classes.DeactiveNavigationItem}>
-                <a href="/">
+                <a href="/contact">
                     <span></span>
                     <span></span>
                     <span></span>
