@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 
 import logo from "../../../assets/dna-code-white.png";
 import classes from "./Authenticate.module.css";
