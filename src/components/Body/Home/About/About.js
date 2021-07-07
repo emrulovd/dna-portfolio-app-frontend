@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Aos from 'aos';
-
+import Scramble from 'react-scramble';
 import { Container, Row, Col} from 'react-bootstrap';
 import classes from './About.module.css';
 import video from '../../../../assets/dna-logo-animation.mp4';
@@ -8,6 +8,20 @@ import video from '../../../../assets/dna-logo-animation.mp4';
 import Objectives from './Objectives/Objectives';
 
 const About = () => {
+
+
+
+    const [scrambleText, setScrambleText] = useState(false);
+
+    const onScramble = () => {
+        if(window.scrollY >= 400 && window.scrollY <= 1000){
+            setScrambleText(true)
+        }else{
+            setScrambleText('+1')
+        }
+    }
+
+    window.addEventListener('scroll', onScramble);
 
     useEffect(() =>{
         Aos.init({duration: 1000});
@@ -24,7 +38,24 @@ const About = () => {
                     </Col>
                     <Col sm={7}>
                         <div className={classes.Text} data-aos="zoom-in">
-                            <h3>About</h3>
+                            <h3>
+                            <Scramble
+                            autoStart={scrambleText}
+                            text='About'
+                            speed="medium"
+                            steps={[
+                            {
+                                roll: 15,
+                                action: '+',
+                                type: 'all',
+                            },
+                            {
+                                action: '-',
+                                type: 'forward',
+                            },
+                            ]}
+                        />
+                            </h3>
                             <p>                                
                                 Establish a communication structure
                                 Decide what resources you’re ready to dedicate to collaboration
