@@ -9,17 +9,17 @@ const Input = props => {
         case ('input'):
             inputElement = <input
                 className={classes.InputElement}
-                type={props.type}
+                type={props.inputType}
                 name={props.name}
-                ref={props.reff}
+                ref={props.inputRef}
                 required/>;
                 break;
         default:
             inputElement = <input
             className={classes.InputElement}
-            type={props.type}
+            type={props.inputType}
             name={props.name}
-            ref={props.reff}
+            ref={props.inputRef}
             required/>;
             break;
     }
