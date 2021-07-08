@@ -11,7 +11,8 @@ const Input = props => {
                 className={classes.InputElement}
                 type={props.inputType}
                 name={props.name}
-                ref={props.inputRef}
+                value={props.value}
+                onChange={props.change}
                 required/>;
                 break;
         default:
@@ -19,7 +20,8 @@ const Input = props => {
             className={classes.InputElement}
             type={props.inputType}
             name={props.name}
-            ref={props.inputRef}
+            value={props.value}
+            onChange={props.change}
             required/>;
             break;
     }

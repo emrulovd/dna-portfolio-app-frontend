@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useState } from "react";
 
 import logo from "../../../assets/dna-code-white.png";
 import classes from "./Authenticate.module.css";
@@ -8,14 +8,24 @@ import Input from "../../UI/Input/Input";
 import Button from "../../UI/Button/Button";
 
 const Authenticate = () => {
-  const usernameInputRef = useRef();
-  const passwordInputRef = useRef();
+
+  const [enteredUsername, setEnteredUsername] = useState('');
+  const [enteredPassword, setEnteredPassword] = useState('');
 
 
   const authenticateHandler = (event) => {
     event.preventDefault();
-    
+    setEnteredUsername('');
+    setEnteredPassword('');
   };
+
+  const enteredUsernameHandler = (event) => {
+    setEnteredUsername(event.target.value)
+  }
+
+  const enteredPasswordHandler = (event) => {
+    setEnteredPassword(event.target.value);
+  }
 
   return (
     <div className={classes.Wrapper}>
@@ -25,16 +35,18 @@ const Authenticate = () => {
           <Input
             elementType="input"
             name="username"
-            inputRef={usernameInputRef}
             label="username"
             inputType="text"
+            value={enteredUsername}
+            change={enteredUsernameHandler}
           />
           <Input
             elementType="input"
             name="password"
-            inputRef={passwordInputRef}
             label="password"
             inputType="password"
+            value={enteredPassword}
+            change={enteredPasswordHandler}
           />
           <Button buttonType="submit" >Login</Button>
         </form>
