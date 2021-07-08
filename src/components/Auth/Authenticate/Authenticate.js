@@ -15,6 +15,11 @@ const Authenticate = () => {
 
   const authenticateHandler = (event) => {
     event.preventDefault();
+
+    if(enteredUsername.trim() === '' && enteredPassword.trim() === ''){
+        return;
+    }
+
     setEnteredUsername('');
     setEnteredPassword('');
   };
