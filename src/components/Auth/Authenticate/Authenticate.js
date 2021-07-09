@@ -34,7 +34,7 @@ const Authenticate = () => {
 
   return (
     <div className={classes.Wrapper}>
-      <Card>
+      <Card className={classes.Card}>
         <img className={classes.Logo} src={logo} alt=".." />
         <form onSubmit={authenticateHandler}>
           <Input
@@ -53,7 +53,7 @@ const Authenticate = () => {
             value={enteredPassword}
             change={enteredPasswordHandler}
           />
-          <Button buttonType="submit" >Login</Button>
+          <Button buttonType="submit" className={classes.Button}>Login</Button>
         </form>
       </Card>
     </div>
