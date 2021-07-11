@@ -21,11 +21,11 @@
     display: block;
     transition: 0.5s;
     pointer-events: none;
-}
+}   
 
-.InputElement{
+.InputElement,
+.TextElement{
     position: absolute;
-    width: 93%;
     height: 100%;
     background: transparent;
     box-shadow: none;
@@ -63,3 +63,30 @@
 .Input .InputElement:valid ~ .Line{
     height: 100%;
 }
+
+
+.Textarea{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    margin: 70px 0 20px 0;
+
+}
+
+.TextElement{
+    height: 100%;
+    resize: none;
+}
+
+.TextElement:focus + .Label,
+.TextElement:valid + .Label {
+    top: -35px;
+    left: -0px;
+}
+
+.Textarea .TextElement:focus ~ .Line,
+.Textarea .TextElement:valid ~ .Line{
+    height: 100%;
+}
+
