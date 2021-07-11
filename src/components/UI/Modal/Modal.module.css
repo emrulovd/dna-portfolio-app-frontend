@@ -10,6 +10,7 @@
   
   .modal {
     position: fixed;
+    height: 300px;
     top: 30vh;
     left: 10%;
     width: 80%;
@@ -18,17 +19,19 @@
   }
   
   .header {
-    background: #4f005f;
+    background: #fefefe;
+    box-shadow: 0 0 10px #fff, 0 0 40px #fff, 0 0 80px #fff;
     padding: 1rem;
   }
   
   .header h2 {
     margin: 0;
-    color: white;
+    color: #000;
   }
   
   .content {
     padding: 1rem;
+    color: #fefefe
   }
   
   .actions {
