@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Route, Switch } from "react-router-dom";
 import { authCheckState } from "./store/actions/auth";
 
@@ -14,6 +14,7 @@ import Portfolio from "./components/Body/Portfolio/Portfolio";
 import Services from "./components/Body/Services/Services";
 
 function App() {
+  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -22,13 +23,9 @@ function App() {
 
   return (
     <Switch>
-      <Route path="/auth/login">
-        <Auth />
-      </Route>
-      <Route path="/admin">
-        <Admin />
-      </Route>
-      <Route path="/">
+      {!isAuthenticated && <Route path="/auth/login" component={Auth} />}
+      {isAuthenticated && <Route path="/admin" component={Admin} />}
+      <Route path="" exact>
         <Header />
         <main>
           <Switch>

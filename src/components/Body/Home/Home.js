@@ -11,8 +11,8 @@ const Home = () => {
         <Fragment>
             <Cockpit/>
             <About/>
-            <Services/>
             <Projects/>
+            <Services/>
             <Contact/>
         </Fragment>
     )

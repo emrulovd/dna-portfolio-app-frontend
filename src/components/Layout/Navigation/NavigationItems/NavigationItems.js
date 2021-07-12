@@ -6,7 +6,7 @@ const NavigationItems = () => {
     const [navItemStatus, setNavItemStatus] = useState(false);
 
     const changeNavItemStatus = () => {
-        if(window.scrollY >= 80){
+        if(window.scrollY >= 20){
             setNavItemStatus(true);
         }else{
             setNavItemStatus(false);
