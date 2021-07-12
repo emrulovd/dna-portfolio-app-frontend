@@ -12,7 +12,7 @@ const Header = () => {
   let [logoSymbol, setLogoSymbol] = useState(logoBlack);
 
   const changeNavabarStatus = () => {
-    if (window.scrollY >= 80) {
+    if (window.scrollY >= 20) {
       setNavbarStatus(true);
       setLogoSymbol(logoWhite);
     } else {

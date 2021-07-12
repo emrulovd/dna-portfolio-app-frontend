@@ -38,8 +38,8 @@ const Input = props => {
     return(
         <div className={ props.elementType === 'input' ? classes.Input : classes.Textarea}>
             {inputElement}
-            <span className={classes.Label}>{props.label}</span>
-            <span className={classes.Line}></span>
+            <span className={`${classes.Label} ${props.className}`}>{props.label}</span>
+            <span className={`${classes.Line} ${props.className}`}></span>
         </div> 
     )
 }

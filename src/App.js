@@ -23,9 +23,9 @@ function App() {
 
   return (
     <Switch>
-      { isAuthenticated && <Route path="/admin" component={Admin} />}
-      { !isAuthenticated && <Route path="/auth/login" component={Auth} />}
-      <Route exact path="/">
+      {!isAuthenticated && <Route path="/auth/login" component={Auth} />}
+      {isAuthenticated && <Route path="/admin" component={Admin} />}
+      <Route path="" exact>
         <Header />
         <main>
           <Switch>

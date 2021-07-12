@@ -1,17 +1,13 @@
-import { Container, Row, Col } from 'react-bootstrap';
+import classes from './Contact.module.css'
 
-import ContactForm from './ContactForm/ContactForm';
+import ContactForm from "./ContactForm/ContactForm";
 
 const Contact = () => {
-    return( 
-        <Container>
-            <Row>
-                <Col>
-                    <ContactForm/>
-                </Col>
-            </Row>
-        </Container>
-    )
-}
+  return (
+    <div className={classes.Wrapper}>
+      <ContactForm />
+    </div>
+  );
+};
 
 export default Contact;

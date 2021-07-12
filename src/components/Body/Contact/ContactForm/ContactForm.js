@@ -52,22 +52,23 @@ const ContactForm = () => {
       .catch((error) => {
         setModal({
           title: "Bad Request",
-          message: "Please try again later ( for more information contact our team)",
+          message:
+            "Please try again later ( for more information contact our team)",
         });
         console.log(error);
       });
     console.log(contactForm);
     setModal({
-        title: "Success",
-        message: "You successfully contacted us. We are going to respond to your message as soon as we can.",
-    })
+      title: "Success",
+      message:
+        "You successfully contacted us. We are going to respond to your message as soon as we can.",
+    });
     resetForm();
   };
 
   const modalHandler = () => {
     setModal(null);
   };
-
 
   const enteredNameHandler = (event) => {
     setEnteredName(event.target.value);
