@@ -7,9 +7,8 @@ import video from '../../../../assets/dna-logo-animation.mp4';
 
 import Objectives from './Objectives/Objectives';
 
+
 const About = () => {
-
-
 
     const [scrambleText, setScrambleText] = useState(false);
 
@@ -27,8 +26,13 @@ const About = () => {
         Aos.init({duration: 1000});
     }, []);
 
+
+   
+      
     return(
+        
         <div className={classes.Wrapper}>
+            
             <Container>
                 <Row>
                     <Col sm={4}>
@@ -56,12 +60,9 @@ const About = () => {
                             ]}
                         />
                             </h3>
-                            <p>                                
-                                Establish a communication structure
-                                Decide what resources you’re ready to dedicate to collaboration
-                                with a vendor, and establish clear communication flows
-                                regarding different aspects of the project.
-                            </p>
+
+                            
+                                
                         </div>
                     </Col>
                 </Row>
