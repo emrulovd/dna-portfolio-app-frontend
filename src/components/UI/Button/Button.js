@@ -4,15 +4,15 @@ import classes from './Button.module.css';
 
 const Button = props => {
     return(
-            <button className={classes.Button} type={props.type}>
-                <a href="/auth/login">
+            <a className={`${classes.Anchor} ${props.className}`} href='/'>
                     <span></span>
                     <span></span>
                     <span></span>
                     <span></span>
-                    {props.children}
-                </a>
+            <button className={classes.Button} type={props.buttonType}>
+                {props.children}
             </button>
+            </a>
     )
 }
 

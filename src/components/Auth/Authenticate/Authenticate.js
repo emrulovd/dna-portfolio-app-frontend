@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useState } from "react";
 
 import logo from "../../../assets/dna-code-white.png";
 import classes from "./Authenticate.module.css";
@@ -8,36 +8,52 @@ import Input from "../../UI/Input/Input";
 import Button from "../../UI/Button/Button";
 
 const Authenticate = () => {
-  const usernameInputRef = useRef();
-  const passwordInputRef = useRef();
+
+  const [enteredUsername, setEnteredUsername] = useState('');
+  const [enteredPassword, setEnteredPassword] = useState('');
+
 
   const authenticateHandler = (event) => {
-    console.log(event)
     event.preventDefault();
-    console.log(usernameInputRef);
-    console.log(passwordInputRef);
+
+    if(enteredUsername.trim() === '' && enteredPassword.trim() === ''){
+        return;
+    }
+
+    setEnteredUsername('');
+    setEnteredPassword('');
   };
+
+  const enteredUsernameHandler = (event) => {
+    setEnteredUsername(event.target.value)
+  }
+
+  const enteredPasswordHandler = (event) => {
+    setEnteredPassword(event.target.value);
+  }
 
   return (
     <div className={classes.Wrapper}>
-      <Card>
+      <Card className={classes.Card}>
         <img className={classes.Logo} src={logo} alt=".." />
-        <form onSubmit={(event) => authenticateHandler(event)}>
+        <form onSubmit={authenticateHandler}>
           <Input
             elementType="input"
             name="username"
-            reff={usernameInputRef}
             label="username"
-            type="text"
+            inputType="text"
+            value={enteredUsername}
+            change={enteredUsernameHandler}
           />
           <Input
             elementType="input"
             name="password"
-            reff={passwordInputRef}
             label="password"
-            type="password"
+            inputType="password"
+            value={enteredPassword}
+            change={enteredPasswordHandler}
           />
-          <Button type="submit" >Login</Button>
+          <Button buttonType="submit" className={classes.Button}>Login</Button>
         </form>
       </Card>
     </div>

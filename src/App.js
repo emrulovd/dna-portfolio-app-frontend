@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { Route, Switch } from "react-router-dom";
 
 import "./App.css";
@@ -6,10 +6,10 @@ import Admin from "./components/Admin/Admin";
 import Auth from "./components/Auth/Auth";
 import Header from "./components/Layout/Navigation/Header";
 import Home from "./components/Body/Home/Home";
-import About from './components/Body/About/About';
-import Contact from './components/Body/Contact/Contact';
-import Portfolio from './components/Body/Portfolio/Portfolio';
-import Services from './components/Body/Services/Services';
+import About from "./components/Body/About/About";
+import Contact from "./components/Body/Contact/Contact";
+import Portfolio from "./components/Body/Portfolio/Portfolio";
+import Services from "./components/Body/Services/Services";
 
 function App() {
   return (
