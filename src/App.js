@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
 import { Route, Switch } from "react-router-dom";
+import { authCheckState } from "./store/actions/auth";
 
 import "./App.css";
 import Admin from "./components/Admin/Admin";
@@ -12,6 +14,12 @@ import Portfolio from "./components/Body/Portfolio/Portfolio";
 import Services from "./components/Body/Services/Services";
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(authCheckState());
+  }, [dispatch]);
+
   return (
     <Switch>
       <Route path="/auth/login">
