@@ -9,7 +9,6 @@ const Projects = () => {
             <Container fluid>
                 <Row>
                     <Col>
-                        <h1>Projects</h1>
                     </Col>
                 </Row>
             </Container>

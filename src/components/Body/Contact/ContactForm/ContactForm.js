@@ -1,13 +1,11 @@
-import React, { useState, Fragment } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 
-import { Row, Col } from "react-bootstrap";
 import Card from "../../../UI/Card/Card";
 import Input from "../../../UI/Input/Input";
 import Button from "../../../UI/Button/Button";
 import Modal from "../../../UI/Modal/Modal";
 
-import logo from "../../../../assets/dna-code-white.png";
 import classes from "./ContactForm.module.css";
 
 const ContactForm = () => {
@@ -84,7 +82,7 @@ const ContactForm = () => {
   };
 
   return (
-    <Fragment>
+    <div className={classes.Wrapper}>
       {modal && (
         <Modal
           title={modal.title}
@@ -92,11 +90,16 @@ const ContactForm = () => {
           onConfirm={modalHandler}
         />
       )}
-      <Card className={classes.Card}>
-        <img className={classes.Logo} src={logo} alt="..." />
+      {/* <Card className={classes.Card}> */}
+        <div className={classes.Details}>
+          <h3>Contact</h3>
+          <p className={classes.PhoneD}>+359 89 678 4966</p>
+          <p className={classes.Phone}>+359 87 699 9819</p>
+          <p>dna.code.dev@gmail.com</p>
+        </div>
         <form onSubmit={sendMessageFormHandler}>
-          <Row>
-            <Col>
+          <div className={classes.Row}>
+            <div className={classes.Col}>
               <Input
                 elementType="input"
                 name="name"
@@ -106,19 +109,19 @@ const ContactForm = () => {
                 value={enteredName}
                 change={enteredNameHandler}
               />
-            </Col>
-            <Col>
+            </div>
+            <div className={classes.Col}>
               <Input
                 elementType="input"
                 name="number"
-                label="Your Telephone Number"
+                label="Your Telephone"
                 inputType="text"
                 className={classes.Input}
                 value={enteredPhone}
                 change={enteredPhoneHandler}
               />
-            </Col>
-          </Row>
+            </div>
+          </div>
           <Input
             elementType="input"
             name="email"
@@ -129,6 +132,7 @@ const ContactForm = () => {
             change={enteredEmailHandler}
           />
           <Input
+            className={classes.Input}
             elementType="textarea"
             name="message"
             label="Your Message"
@@ -140,8 +144,8 @@ const ContactForm = () => {
             Send
           </Button>
         </form>
-      </Card>
-    </Fragment>
+      {/* </Card> */}
+    </div>
   );
 };
 

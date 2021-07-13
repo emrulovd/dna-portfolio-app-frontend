@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from 'react-redux';
+import { useHistory } from "react-router";
+
 import { login } from '../../../store/actions/auth';
 
 import logo from "../../../assets/dna-code-white.png";
@@ -11,6 +13,7 @@ import Button from "../../UI/Button/Button";
 import Modal from "../../UI/Modal/Modal";
 
 const Authenticate = () => {
+  const history = useHistory();
   const dispatch = useDispatch();
   const [enteredUsername, setEnteredUsername] = useState('');
   const [enteredPassword, setEnteredPassword] = useState('');
@@ -36,6 +39,7 @@ const Authenticate = () => {
       password: enteredPassword
     }
     dispatch(login(authData));
+    history.push('/admin');
     resetForm();
   };
 

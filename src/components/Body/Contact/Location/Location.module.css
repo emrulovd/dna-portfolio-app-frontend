@@ -1,0 +1,11 @@
+.Wrapper{
+    margin: 60px 0px 0 0;
+    height: 95vh;
+    z-index: 0;
+    /* box-shadow: 0 0 10px #000, 0 0 40px #000, 0 0 80px #000; */
+}
+
+.Frame{
+    border: none;
+    z-index: 0;
+}

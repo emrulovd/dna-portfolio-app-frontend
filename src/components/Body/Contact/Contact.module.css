@@ -2,3 +2,15 @@
     height: 90vh;
     width: 100%;
 }
+
+.Col{
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+
+.Row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
