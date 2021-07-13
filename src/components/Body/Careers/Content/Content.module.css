@@ -1,0 +1,19 @@
+.Wrapper{
+    padding: 75px 0 0 0;
+    background: url('../../../../assets/auth-background.png');
+    background-size: 100% 100%;
+    height: 100%;
+    width: 100%;
+}
+
+.Wrapper img{
+    display: block;
+    margin: 150px auto 50px auto;
+    width: 128px;
+}
+
+.Wrapper h2{
+    font-family: 'Audiowide', cursive;
+    color: #000;
+    text-align: center;
+}

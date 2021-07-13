@@ -15,7 +15,7 @@ const About = () => {
     if (window.scrollY >= 400 && window.scrollY <= 1000) {
       setScramble(true);
     } else {
-      setScramble("+1");
+      setScramble(false);
     }
   };
 

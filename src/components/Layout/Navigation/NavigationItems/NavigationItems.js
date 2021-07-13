@@ -36,12 +36,12 @@ const NavigationItems = () => {
                 </a>
             </li>
             <li className={ navItemStatus? classes.ActiveNavigationItem : classes.DeactiveNavigationItem}>
-                <a href="/">
+                <a href="/careers">
                     <span></span>
                     <span></span>
                     <span></span>
                     <span></span>
-                    About us
+                    Careers
                 </a>
             </li>
         </ul>

@@ -12,6 +12,7 @@ import About from "./components/Body/About/About";
 import Contact from "./components/Body/Contact/Contact";
 import Portfolio from "./components/Body/Portfolio/Portfolio";
 import Services from "./components/Body/Services/Services";
+import Careers from "./components/Body/Careers/Careers";
 
 function App() {
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
@@ -33,6 +34,7 @@ function App() {
             <Route path="/portfolio" component={Portfolio} />
             <Route path="/about" component={About} />
             <Route path="/contact" component={Contact} />
+            <Route path="/careers" component={Careers}/>
             <Route path="/" component={Home} exact />
           </Switch>
         </main>
