@@ -22,31 +22,6 @@ function App() {
   }, [dispatch]);
 
   return (
-<<<<<<< HEAD
-    
-    <Fragment>
-      <Switch>
-        <Route path="/auth/login">
-          <Auth />
-        </Route>
-        <Route path="/admin">
-          <Admin />
-        </Route>
-        <Route path="/">
-          <Header />
-          <main>
-            <Switch>
-              <Route path="/services" component={Services}/>
-              <Route path="/portfolio" component={Portfolio}/>
-              <Route path="/about" component={About}/>
-              <Route path="/contact" component={Contact}/>
-              <Route path="/" component={Home} exact/>
-            </Switch>
-          </main>
-        </Route>
-      </Switch>
-    </Fragment>
-=======
     <Switch>
       {!isAuthenticated && <Route path="/auth/login" component={Auth} />}
       {isAuthenticated && <Route path="/admin" component={Admin} />}
@@ -63,7 +38,6 @@ function App() {
         </main>
       </Route>
     </Switch>
->>>>>>> 773d18d065bd375cb0a3cc120c8e055fea2efcde
   );
 }
 
