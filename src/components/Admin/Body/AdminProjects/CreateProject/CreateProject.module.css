@@ -1,0 +1,9 @@
+.Card{
+    width: 800px;
+    height: 500px;
+    color: #fff;
+}
+
+.Button{
+    margin: 70px 0 0 25%; 
+}

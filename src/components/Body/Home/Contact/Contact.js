@@ -26,8 +26,8 @@ const Contact = () => {
     }, []);
 
     return(
-       <div className={classes.Wrapper}>
-            <Container fluid>
+       <div className={classes.Wrapper} >
+            <Container fluid >
                 <Row md='3'>
                     <Col md='true'> 
                     <h3 className={classes.TitleBadges}>DNA &#60;code&#62; &copy; 2021</h3> 
@@ -43,7 +43,7 @@ const Contact = () => {
 
 
                     <Col>
-                    <h3 className={classes.TitleBadges}>Useful Links</h3>
+                    <h3 className={classes.TitleBadges} >Useful Links</h3>
                     <Row md='true' className={classes.FooterNav}>
                         <Col md='auto'>
                         <ul className={classes.FooterNavItem}>
