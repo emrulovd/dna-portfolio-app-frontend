@@ -1,4 +1,7 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+
+import { addProject } from "../../../../../store/actions/projects";
 
 import Card from "../../../../UI/Card/Card";
 import Input from "../../../../UI/Input/Input";
@@ -7,6 +10,7 @@ import Button from "../../../../UI/Button/Button";
 import classes from "./CreateProject.module.css";
 
 const CreateProject = () => {
+  const dispatch = useDispatch();
   const [enteredTitle, setEnteredTitle] = useState("");
   const [enteredImages, setEnteredImages] = useState(null);
   const [enteredDescription, setEnteredDescription] = useState("");
@@ -28,13 +32,13 @@ const CreateProject = () => {
     if (!emptyValidator()) {
       return;
     }
-    console.log(enteredImages)
     let formData = new FormData();
-    formData.append('title', enteredTitle);
-    formData.append('description', enteredDescription);
+    formData.append("title", enteredTitle);
+    formData.append("description", enteredDescription);
     for (const key of Object.keys(enteredImages)) {
       formData.append("projectImageCollection", enteredImages[key]);
     }
+    dispatch(addProject(formData));
   };
 
   const enteredTitleHandler = (event) => {

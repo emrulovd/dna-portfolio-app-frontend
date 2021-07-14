@@ -11,17 +11,17 @@ const projectSlice = createSlice({
   initialState: initialProjectState,
   reducers: {
     isLoading(state) {
-        state.isLoading = true;
+      state.isLoading = true;
     },
     isNotLoading(state) {
-        state.isLoading = false;
+      state.isLoading = false;
     },
     getAllProjects(state, actions) {
       state.projects = actions.payload;
     },
-    getOneProject(state, actions){
-        state.project = actions.payload;
-    }
+    getOneProject(state, actions) {
+      state.project = actions.payload;
+    },
   },
 });
 
