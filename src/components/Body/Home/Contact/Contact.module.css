@@ -10,7 +10,7 @@
 .Badge{
     display: block;
     padding-top: 10px;
-    margin-left: 135px;
+    margin-left: 40px;
 }
 
 .Badge img {
@@ -23,6 +23,10 @@
     font-family: 'Audiowide', cursive;
     text-transform: uppercase;
     color: #fff;
+}
+
+.TitleBadgesItem{
+    padding-left: 160px;
 }
 
 .LogoWrapper{

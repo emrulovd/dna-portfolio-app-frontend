@@ -79,17 +79,17 @@ const Contact = () => {
 
                     <Col xs='3'>
                     <h3 className={classes.TitleBadges}>Follow us</h3>
-                        <Row>
+                        <Row  className={classes.TitleBadgesItem}>
                                 {
                                 contact_badges.map((contact, index) => {
                                     return(
-                                        <Col md={2} key={index}>
+                                        <Row key={index}>
                                             <div className={classes.Badge}>
                                                 <a href={contact.url}>
                                                 <img src={contact.badge} alt="..."/>
                                                 </a>
                                             </div>    
-                                        </Col>
+                                        </Row>
                                     )
                                 })
                                 }
