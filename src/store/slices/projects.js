@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialProjectState = {
   projects: [],
+  project: null,
   isLoading: false,
 };
 
@@ -18,6 +19,9 @@ const projectSlice = createSlice({
     getAllProjects(state, actions) {
       state.projects = actions.payload;
     },
+    getOneProject(state, actions){
+        state.project = actions.payload;
+    }
   },
 });
 
