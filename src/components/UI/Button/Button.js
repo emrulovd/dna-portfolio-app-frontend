@@ -9,7 +9,7 @@ const Button = props => {
                     <span></span>
                     <span></span>
                     <span></span>
-            <button className={classes.Button} type={props.buttonType}>
+            <button className={classes.Button} type={props.buttonType} onClick={props.onClick}>
                 {props.children}
             </button>
             </a>

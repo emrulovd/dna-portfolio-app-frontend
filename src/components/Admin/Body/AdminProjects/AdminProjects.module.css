@@ -1,0 +1,13 @@
+.Wrapper{
+    margin: 0 0 0 250px;
+}
+
+.Title{
+    margin: 70px auto;
+    text-align: center;
+    font-family: 'Audiowide', cursive;
+}
+
+.Button{
+    margin: 0 0 0 42%;
+}

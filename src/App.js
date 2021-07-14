@@ -13,6 +13,7 @@ import Contact from "./components/Body/Contact/Contact";
 import Portfolio from "./components/Body/Portfolio/Portfolio";
 import Services from "./components/Body/Services/Services";
 import Careers from "./components/Body/Careers/Careers";
+import NotFound from './components/NotFound/NotFound';
 
 function App() {
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
@@ -36,9 +37,11 @@ function App() {
             <Route path="/contact" component={Contact} />
             <Route path="/careers" component={Careers}/>
             <Route path="/" component={Home} exact />
+            <Route component={NotFound}/>
           </Switch>
         </main>
       </Route>
+      <Route component={NotFound}/>
     </Switch>
   );
 }

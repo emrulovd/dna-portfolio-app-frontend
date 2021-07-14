@@ -18,8 +18,8 @@ const Sidebar = () => {
         <img src={logo} alt="..." />
       </div>
       <ul className={classes.SideNav}>
-        <NavLink to="/admin/dashboard">Dahsboard</NavLink>
-        <NavLink to="/admin/users">Projects</NavLink>
+        <NavLink to="/admin">Dahsboard</NavLink>
+        <NavLink to="/admin/projects">Projects</NavLink>
         <NavLink to="/admin/users">Analyse</NavLink>
         <NavLink to="/admin/users">Apps</NavLink>
         <NavLink to="/admin/users">Members</NavLink>
