@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { Route, Switch } from "react-router-dom";
 
 import { authCheckState } from "./store/actions/auth";
-import { fetchAllProjects } from "./store/actions/projects";
 
 import "./App.css";
 import Admin from "./components/Admin/Admin";
@@ -24,8 +23,6 @@ function App() {
 
   useEffect(() => {
     dispatch(authCheckState());
-    // Testing the fetch
-    dispatch(fetchAllProjects());
   }, [dispatch]);
 
   return (
