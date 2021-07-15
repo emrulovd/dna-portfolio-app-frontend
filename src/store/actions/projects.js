@@ -26,6 +26,7 @@ export const fetchByIdProject = (id) => {
 
 export const addProject = (projectData) => {
   return (dispatch) => {
+    console.log(header);
     dispatch(projectActions.isLoading());
     axios.post(URL, projectData, { headers: header }).then((response) => {
       console.log(response.data.message);

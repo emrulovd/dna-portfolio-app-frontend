@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { Container, Row, Col } from 'react-bootstrap'; 
 import classes from './Projects.module.css'
 
@@ -9,6 +7,7 @@ const Projects = () => {
             <Container fluid>
                 <Row>
                     <Col>
+                       
                     </Col>
                 </Row>
             </Container>
