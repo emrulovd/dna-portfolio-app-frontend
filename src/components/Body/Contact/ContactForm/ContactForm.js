@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-import Card from "../../../UI/Card/Card";
 import Input from "../../../UI/Input/Input";
 import Button from "../../../UI/Button/Button";
 import Modal from "../../../UI/Modal/Modal";
@@ -90,7 +89,6 @@ const ContactForm = () => {
           onConfirm={modalHandler}
         />
       )}
-      {/* <Card className={classes.Card}> */}
         <div className={classes.Details}>
           <h3>Contact</h3>
           <p className={classes.PhoneD}>+359 89 678 4966</p>
@@ -144,7 +142,6 @@ const ContactForm = () => {
             Send
           </Button>
         </form>
-      {/* </Card> */}
     </div>
   );
 };

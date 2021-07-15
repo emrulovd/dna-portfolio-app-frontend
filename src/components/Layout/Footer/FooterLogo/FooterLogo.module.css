@@ -1,0 +1,16 @@
+.TitleBadges{
+    font-size: 10px;
+    text-align: center;
+    font-family: 'Audiowide', cursive;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.LogoWrapper{
+    padding-left: 150px;
+    padding-top: 5px;
+}
+
+.FooterLogo{
+    height: 64px;
+}

@@ -1,0 +1,21 @@
+.TitleBadges {
+  font-size: 10px;
+  text-align: center;
+  font-family: "Audiowide", cursive;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.TitleBadgesItem {
+  padding-left: 130px;
+}
+
+.Badge {
+  display: block;
+  padding-top: 10px;
+  margin-left: 40px;
+}
+
+.Badge img {
+  width: 60px;
+}

@@ -1,0 +1,27 @@
+.TitleBadges {
+  font-size: 10px;
+  text-align: center;
+  font-family: "Audiowide", cursive;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.TitleBadgesItem {
+  padding-left: 130px;
+}
+
+.FooterNav {
+  padding-left: 95px;
+}
+
+.FooterNavItem {
+  list-style: none;
+  overflow: hidden;
+}
+
+.FooterNavItem li a {
+  text-decoration: none;
+  font-size: 15px;
+  font-family: "Audiowide", cursive;
+  color: #fff;
+}

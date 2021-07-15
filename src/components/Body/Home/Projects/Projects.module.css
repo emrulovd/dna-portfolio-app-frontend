@@ -1,5 +1,31 @@
 .Wrapper{
-    height: 100vh;
+    height: 90vh;
     width: 100%;
-    background: #fefefe;
+    background: #000;
+    color: #fff;
+}
+
+.Title{
+    text-align: center;
+    font-family: 'Audiowide', cursive;
+    text-transform: uppercase;
+    padding: 50px 0 50px 0;
+}
+
+.ProjectImage{
+    display: block;
+    margin: auto;
+    width: 600px;
+}
+
+.ProjectInfo{
+    margin: 50px 100px 0 0;
+}
+
+.ProjectInfo h4{
+    margin-bottom: 20px; 
+}
+
+.Button {
+    margin: 70px 0 0 80px;
 }
