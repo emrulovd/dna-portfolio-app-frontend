@@ -10,7 +10,6 @@ import classes from "./Projects.module.css";
 
 const Projects = () => {
   const projects = useSelector((state) => state.project.projects);
-  const isLoading = useSelector(state => state.project.isLoading);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -21,7 +20,7 @@ const Projects = () => {
   }, [dispatch]);
 
   return (
-    <div className={classes.Wrapper}>
+    <div className={classes.Wrapper}>  
       <Container fluid data-aos="zoom-in">
         <h3 className={classes.Title}>Projects</h3>
         <Row>

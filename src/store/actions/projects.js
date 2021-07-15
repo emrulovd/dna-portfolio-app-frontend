@@ -34,3 +34,13 @@ export const addProject = (projectData) => {
     dispatch(projectActions.isNotLoading());
   };
 };
+
+
+export const lazyLoading = () => {
+  return dispatch => {
+    dispatch(projectActions.isLoading());
+    setTimeout(() => {
+      dispatch(projectActions.isNotLoading());
+    }, 500);
+  }
+}
