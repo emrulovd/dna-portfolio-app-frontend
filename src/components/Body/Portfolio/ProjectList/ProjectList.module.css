@@ -1,0 +1,12 @@
+.Wrapper{
+    height: 100%;
+    width: 100%;
+    background: #000;
+}
+
+.Title{
+    padding: 70px 0 50px 0;
+    text-align: center;
+    color: #fff;
+    font-family: 'Audiowide', cursive;
+}
