@@ -1,0 +1,10 @@
+.Wrapper{
+    background: #000;
+    width: 100%;
+}
+
+.InputImage{
+    display: block;
+    margin: 75px auto;
+    width: 64px;
+}
