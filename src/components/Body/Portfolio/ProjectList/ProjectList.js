@@ -11,7 +11,6 @@ const ProjectList = () => {
   return (
     <div className={classes.Wrapper}>
       <Container fluid>
-        <h3 className={classes.Title}>Projetcts</h3>
         {projects.map((project, index) => {
           return (
             <Row key={index}>

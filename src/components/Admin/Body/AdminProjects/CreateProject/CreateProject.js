@@ -14,8 +14,15 @@ const CreateProject = () => {
   const [enteredTitle, setEnteredTitle] = useState("");
   const [enteredImages, setEnteredImages] = useState(null);
   const [enteredDescription, setEnteredDescription] = useState("");
-  // To do
-  // const [enteredTechnologies, setEnteredTechnologies] = useState("");
+  const [enteredType, setEnteredType] = useState("");
+  const [enteredTechnologies, setEnteredTechnologies] = useState("");
+
+  const projectTypeOptions = [
+    {name: 'Web Development', value: 'web development'},
+    {name: 'Mobile App Development', value: 'mobile app development'},
+    {name: 'Bussines Development', value: 'bussines development'},
+    {name: 'Graphic Design', value: 'graphic design'},
+  ]
 
   const emptyValidator = () => {
     if (
@@ -64,6 +71,10 @@ const CreateProject = () => {
           value={enteredTitle}
           change={enteredTitleHandler}
         />
+        <Input 
+          elmentType="select"
+          name="elementType"
+          options={projectTypeOptions}/>
         <input
           type="file"
           name="image"

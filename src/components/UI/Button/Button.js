@@ -8,7 +8,7 @@ const Button = (props) => {
   switch (props.buttonTheme) {
     case "black":
       buttonType = (
-        <a className={`${classes.Anchor} ${props.className}`} href="#">
+        <a className={`${classes.Anchor} ${props.className}`} href={() => false}>
           <span></span>
           <span></span>
           <span></span>
@@ -25,7 +25,7 @@ const Button = (props) => {
       break;
     case "white":
       buttonType = (
-        <a className={`${classes.AnchorWhite} ${props.className}`} href="#">
+        <a className={`${classes.AnchorWhite} ${props.className}`} href={() => false}>
           <span></span>
           <span></span>
           <span></span>
@@ -42,7 +42,7 @@ const Button = (props) => {
       break;
     default:
       buttonType = (
-        <a className={`${classes.Anchor} ${props.className}`} href="#">
+        <a className={`${classes.Anchor} ${props.className}`} href={() => false}>
           <span></span>
           <span></span>
           <span></span>
