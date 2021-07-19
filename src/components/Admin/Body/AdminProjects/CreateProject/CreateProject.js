@@ -18,11 +18,12 @@ const CreateProject = () => {
   const [enteredTechnologies, setEnteredTechnologies] = useState("");
 
   const projectTypeOptions = [
-    {name: 'Web Development', value: 'web development'},
-    {name: 'Mobile App Development', value: 'mobile app development'},
-    {name: 'Bussines Development', value: 'bussines development'},
-    {name: 'Graphic Design', value: 'graphic design'},
-  ]
+    { name: "None", value: "none" },
+    { name: "Web Development", value: "web development" },
+    { name: "Mobile App Development", value: "mobile app development" },
+    { name: "Bussines Development", value: "bussines development" },
+    { name: "Graphic Design", value: "graphic design" },
+  ];
 
   const emptyValidator = () => {
     if (
@@ -34,17 +35,29 @@ const CreateProject = () => {
     return true;
   };
 
+  const reformTehnologies = () => {
+    const reformedTechnology = enteredTechnologies.trim().split(", ");
+    return reformedTechnology;
+  };
+
   const createProjectFormHandler = (event) => {
     event.preventDefault();
     if (!emptyValidator()) {
       return;
     }
+    const reformedTechnologies = reformTehnologies();
     let formData = new FormData();
     formData.append("title", enteredTitle);
+    formData.append("type", enteredType);
+    formData.append("technologies", reformedTechnologies);
     formData.append("description", enteredDescription);
+    console.log(enteredImages);
     for (const key of Object.keys(enteredImages)) {
       formData.append("projectImageCollection", enteredImages[key]);
     }
+    for(var pair of formData.entries()) {
+      console.log(pair[0]+ ', '+ pair[1]);
+   }
     dispatch(addProject(formData));
   };
 
@@ -52,8 +65,16 @@ const CreateProject = () => {
     setEnteredTitle(event.target.value);
   };
 
+  const enteredTypeHandler = (event) => {
+    setEnteredType(event.target.value);
+  };
+
   const enteredImageHandler = (event) => {
     setEnteredImages(event.target.files);
+  };
+
+  const enteredTechnologiesHandler = (event) => {
+    setEnteredTechnologies(event.target.value);
   };
 
   const enteredDescriptionHandler = (event) => {
@@ -71,10 +92,12 @@ const CreateProject = () => {
           value={enteredTitle}
           change={enteredTitleHandler}
         />
-        <Input 
-          elmentType="select"
+        <Input
+          elementType="select"
           name="elementType"
-          options={projectTypeOptions}/>
+          change={enteredTypeHandler}
+          options={projectTypeOptions}
+        />
         <input
           type="file"
           name="image"
@@ -88,6 +111,14 @@ const CreateProject = () => {
           inputType="text"
           value={enteredDescription}
           change={enteredDescriptionHandler}
+        />
+        <Input
+          elementType="input"
+          name="technologies"
+          label="Technologies"
+          inputType="text"
+          value={enteredTechnologies}
+          change={enteredTechnologiesHandler}
         />
         <Button className={classes.Button} buttonType="submit">
           Create

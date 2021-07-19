@@ -8,7 +8,7 @@ const Button = (props) => {
   switch (props.buttonTheme) {
     case "black":
       buttonType = (
-        <a className={`${classes.Anchor} ${props.className}`} href={() => false}>
+        <a className={`${classes.Anchor} ${props.className}`} href="1">
           <span></span>
           <span></span>
           <span></span>
