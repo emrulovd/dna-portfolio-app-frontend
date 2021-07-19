@@ -1,7 +1,10 @@
+import classes from './NotFound.module.css';
+
 const NotFound = () => {
   return(
-    <div>
-      <h1>Page Not Found</h1>
+    <div className={classes.Wrapper}>
+        <h2 className={classes.ErrorTitle}>Page Not Found</h2>
+        <h4 className={classes.ErrorStatus}>404</h4>
     </div>
   );
 };

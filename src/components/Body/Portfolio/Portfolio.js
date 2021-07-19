@@ -1,10 +1,12 @@
-import {Container} from 'react-bootstrap';
+import classes from './Portfolio.module.css';
+
+import ProjectList from './ProjectList/ProjectList';
 
 const Portfolio = () => {
     return(
-        <Container>
-
-        </Container>
+        <div className={classes.Wrapper}>
+            <ProjectList/>
+        </div>
     )
 }
 

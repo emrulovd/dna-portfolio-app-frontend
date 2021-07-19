@@ -1,0 +1,17 @@
+.Wrapper{
+    padding: 200px 0 0 0;
+    height: 70vh;
+    width: 100%;
+}
+
+.ErrorTitle{
+    text-align: center;
+    color: red;
+    font-family: 'Audiowide', cursive;
+}
+
+.ErrorStatus{
+    text-align: center;
+    color: red;
+    font-family: 'Audiowide', cursive;
+}

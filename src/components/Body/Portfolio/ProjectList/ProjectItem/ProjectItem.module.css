@@ -1,0 +1,26 @@
+
+
+.ProjectImage{
+    display: block;
+    margin: 20px auto;
+    width: 550px;
+}
+
+.ProjectInfoRight{
+    margin: 70px 100px 0 0;
+    color: #fff;
+}
+
+.ProjectInfoLeft{
+    margin: 70px 0px 0 120px;
+    float: left;
+    color: #fff;
+}
+
+.ProjectInfo h4{
+    margin-bottom: 20px; 
+}
+
+.Button {
+    margin: 70px 0 0 80px;
+}

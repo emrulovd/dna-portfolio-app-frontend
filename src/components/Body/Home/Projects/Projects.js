@@ -36,7 +36,7 @@ const Projects = () => {
               <h4>WEB DEVELOPMENT</h4>
               <h4>{projects[0].project_title}</h4>
               <p>{projects[0].project_description}</p>
-              <Button className={classes.Button}>More</Button>
+              <Button className={classes.Button}>See More</Button>
             </div>
           </Col>
         </Row>
