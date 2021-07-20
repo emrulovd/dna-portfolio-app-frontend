@@ -1,4 +1,4 @@
-import React, { useState, Fragment } from "react";
+import React, { useState, useEffect, Fragment } from "react";
 
 import logoBlack from "../../../assets/dna-black-logo-symbol.png";
 import logoWhite from "../../../assets/dna-code-symbol.png";
@@ -10,6 +10,14 @@ import DynamicNavigationItems from "./DynamicNavigationItems/DynamicNavigationIt
 const Header = () => {
   const [navbarStatus, setNavbarStatus] = useState(false);
   let [logoSymbol, setLogoSymbol] = useState(logoBlack);
+
+  useEffect(() => {
+    changeNavabarStatus();
+    return () => {
+      setNavbarStatus({});
+      setLogoSymbol({}) 
+    };
+  }, []);
 
   const changeNavabarStatus = () => {
     if (window.scrollY >= 20) {
