@@ -55,9 +55,6 @@ const CreateProject = () => {
     for (const key of Object.keys(enteredImages)) {
       formData.append("projectImageCollection", enteredImages[key]);
     }
-    for(var pair of formData.entries()) {
-      console.log(pair[0]+ ', '+ pair[1]);
-   }
     dispatch(addProject(formData));
   };
 

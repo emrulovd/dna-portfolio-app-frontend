@@ -57,6 +57,7 @@ const Input = (props) => {
           name={props.name}
           value={props.value}
           onChange={props.change}
+          onClick={props.onClick}
           required
         />
       );
