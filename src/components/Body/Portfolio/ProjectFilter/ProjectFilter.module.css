@@ -7,4 +7,10 @@
     display: block;
     margin: 75px auto;
     width: 64px;
+    transition:all 0.5s;
+}
+
+.InputImage:hover{
+    transform: rotate(1turn)  scale(2, 2);
+    transition:all 0.5s ease;
 }

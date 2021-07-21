@@ -1,10 +1,14 @@
-import { Container } from "react-bootstrap";
+import classes from './About.module.css';
+
+import AboutMain from './AboutMain/AboutMain';
+import AboutGoals from './AboutGoals/AboutGoals';
 
 const About = () => {
   return (
-    <Container fluid>
-          <h1>About</h1>
-    </Container>
+    <div className={classes.Wrapper}>
+        <AboutMain/>
+        <AboutGoals/>
+    </div>
   );
 };
 

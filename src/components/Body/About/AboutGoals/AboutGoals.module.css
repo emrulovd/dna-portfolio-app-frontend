@@ -1,0 +1,35 @@
+.Wrapper {
+  padding-bottom: 50px ;
+  height: 100%;
+  width: 100%;
+  background: #000;
+}
+
+.Title{
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Audiowide', cursive;
+    color: #fff;
+}
+
+.BadgeRight {
+  float: left;
+  width: 226px;
+}
+
+.BadgeLeft {
+  float: right;
+  width: 226px;
+}
+
+.TextRight {
+  margin: 70px 0 0 150px;
+  text-align: right;
+  color: #707070;
+}
+
+.TextLeft {
+  margin: 70px 0 0 0;
+  text-align: left;
+  color: #707070;
+}

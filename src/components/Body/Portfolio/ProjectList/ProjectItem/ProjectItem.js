@@ -1,4 +1,5 @@
-import { Fragment } from "react";
+import { Fragment, useEffect } from "react";
+import Aos from "aos";
 import { Col } from "react-bootstrap";
 
 import classes from "./ProjectItem.module.css";
@@ -6,19 +7,25 @@ import classes from "./ProjectItem.module.css";
 import Button from "../../../../UI/Button/Button";
 
 const ProjectItem = (props) => {
+  useEffect(() => {
+    Aos.init({
+      duration: 1000,
+    });
+  });
+
   return (
     <Fragment>
-      {props.project_index  % 2 === 1 ? (
+      {props.project_index % 2 === 1 ? (
         <Fragment>
-          <Col>
+          <Col data-aos="fade-up">
             <div className={classes.ProjectInfoLeft}>
-              <h4>WEB DEVELOPMENT</h4>
+              <h4 className={classes.ProjectType}>{props.project_type}</h4>
               <h4>{props.project_title}</h4>
               <p>{props.project_description}</p>
               <Button className={classes.Button}>See More</Button>
             </div>
           </Col>
-          <Col>
+          <Col data-aos="fade-up">
             <img
               className={classes.ProjectImage}
               src={props.project_image}
@@ -28,16 +35,16 @@ const ProjectItem = (props) => {
         </Fragment>
       ) : (
         <Fragment>
-          <Col>
+          <Col data-aos="fade-up">
             <img
               className={classes.ProjectImage}
               src={props.project_image}
               alt="..."
             />
           </Col>
-          <Col>
+          <Col data-aos="fade-up">
             <div className={classes.ProjectInfoRight}>
-              <h4>WEB DEVELOPMENT</h4>
+              <h4 className={classes.ProjectType}>{props.project_type}</h4>
               <h4>{props.project_title}</h4>
               <p>{props.project_description}</p>
               <Button className={classes.Button}>See More</Button>

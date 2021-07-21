@@ -17,6 +17,10 @@
     color: #fff;
 }
 
+.ProjectType{
+    text-transform: uppercase;
+}
+
 .ProjectInfo h4{
     margin-bottom: 20px; 
 }
