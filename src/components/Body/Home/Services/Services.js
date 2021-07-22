@@ -27,7 +27,11 @@ const Services = () => {
   return (
     <div className={classes.Wrapper} data-aos="zoom-in">
       <Container fluid>
-        <h3 className={classes.Title}>Software Development</h3>
+        <h3 className={classes.Title}>
+          <span className={classes.TextDecortion}>&lt;h3</span>
+          Software Development
+          <span className={classes.TextDecortion}>/&gt;</span>
+        </h3>
         <Row>
           {icons.map((icon, index) => {
             return (

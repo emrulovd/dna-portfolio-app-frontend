@@ -10,7 +10,9 @@ const AboutGoals = () => {
     <div className={classes.Wrapper}>
       <Container fluid>
         <h1 className={classes.Title}>
+        <span className={classes.TextDecortion}>&lt;h1</span>
           Goals
+        <span className={classes.TextDecortion}>/&gt;</span>
         </h1>
         {objectives.map((objective, index) => {
           return (

@@ -5,7 +5,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import classes from "./About.module.css";
 import video from "../../../../assets/dna-logo-animation.mp4";
 
-import Scramble from '../../../../helpers/animation/Scramble'; 
+import Scramble from "../../../../helpers/animation/Scramble";
 import Objectives from "./Objectives/Objectives";
 
 const About = () => {
@@ -43,7 +43,11 @@ const About = () => {
           </Col>
           <Col sm={7}>
             <div className={classes.Text} data-aos="zoom-in">
-              <h3><Scramble start={scramble} text="About us"/></h3>
+              <h3>
+                <span className={classes.TextDecortion}>&lt;h3</span>
+                    <Scramble start={scramble} text="About us" />
+                <span className={classes.TextDecortion}>/&gt;</span>
+              </h3>
               <p>
                 Establish a communication structure Decide what resources you’re
                 ready to dedicate to collaboration with a vendor, and establish

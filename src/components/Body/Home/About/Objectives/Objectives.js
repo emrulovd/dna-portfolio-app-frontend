@@ -8,7 +8,7 @@ import accuracyBadge from "../../../../../assets/badges/accuracy.png";
 import highQualityBadge from "../../../../../assets/badges/highquality.png";
 import innovativeBadge from "../../../../../assets/badges/innovative.png";
 
-import Scramble from '../../../../../helpers/animation/Scramble';
+import Scramble from "../../../../../helpers/animation/Scramble";
 
 const Objectives = () => {
   const images = [
@@ -21,7 +21,11 @@ const Objectives = () => {
     <div className={classes.Wrapper}>
       <Row>
         <Col>
-          <h3 className={classes.Title}><Scramble start={true} text="Goals"/></h3>
+          <h3 className={classes.Title}>
+            <span className={classes.TextDecortion}>&lt;h3</span>
+            <Scramble start={true} text="Goals" />
+            <span className={classes.TextDecortion}>/&gt;</span>
+          </h3>
         </Col>
       </Row>
       <Row>

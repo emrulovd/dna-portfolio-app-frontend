@@ -5,6 +5,11 @@
     color: #fff;
 }
 
+.TextDecortion{
+    color: red;
+    font-size: 12;
+    font-weight: lighter;
+}   
 
 .Title{
     text-align: center;
