@@ -1,7 +1,7 @@
-import fastBadge from "../../../../assets/badges/fast.png";
-import accuracyBadge from "../../../../assets/badges/accuracy.png";
-import highQualityBadge from "../../../../assets/badges/highquality.png";
-import innovativeBadge from "../../../../assets/badges/innovative.png";
+import fastBadge from "../../../../assets/badges/fast1.png";
+import accuracyBadge from "../../../../assets/badges/accuracy1.png";
+import highQualityBadge from "../../../../assets/badges/highquality1.png";
+import innovativeBadge from "../../../../assets/badges/innovative1.png";
 
 
 export const objectives = [

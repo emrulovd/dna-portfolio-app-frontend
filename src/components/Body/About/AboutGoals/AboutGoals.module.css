@@ -6,30 +6,56 @@
 }
 
 .Title{
+    margin: 0 0 50px 0;
     text-align: center;
     text-transform: uppercase;
     font-family: 'Audiowide', cursive;
     color: #fff;
 }
 
+.ColLeft{
+  width: 54.5%;
+  height: 100%;
+  padding-right: 20px;
+}
+
+.ColRight{
+  width: 40%;
+  height: 100%;
+}
+
+.ColLeft2{
+  width: 45.5%;
+  height: 100%;
+}
+
+.ColRight2{
+  width: 50%;
+  height: 100%;
+  padding-left: 20px;
+}
+
 .BadgeRight {
   float: left;
-  width: 226px;
+  width: 96px;
+  margin: 0 0 50px 0 ;
 }
+
 
 .BadgeLeft {
   float: right;
-  width: 226px;
+  width: 96px;
+  margin: 0 0 50px 0 ;
 }
 
 .TextRight {
-  margin: 70px 0 0 150px;
+  margin: 0px 0 0 250px;
   text-align: right;
   color: #707070;
 }
 
 .TextLeft {
-  margin: 70px 0 0 0;
+  margin: 0px 150px 0 0;
   text-align: left;
   color: #707070;
 }
