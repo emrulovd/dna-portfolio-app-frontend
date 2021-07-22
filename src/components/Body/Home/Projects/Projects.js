@@ -20,9 +20,13 @@ const Projects = () => {
   }, [dispatch]);
 
   return (
-    <div className={classes.Wrapper}>  
+    <div className={classes.Wrapper}>
       <Container fluid data-aos="zoom-in">
-        <h3 className={classes.Title}>Projects</h3>
+        <h3 className={classes.Title}>
+          <span className={classes.TextDecortion}>&lt;h3</span>
+          Projects
+          <span className={classes.TextDecortion}>/&gt;</span>
+        </h3>
         <Row>
           <Col>
             <img
