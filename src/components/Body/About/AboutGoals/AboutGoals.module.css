@@ -56,12 +56,12 @@
 
 .TextRight {
   margin: 0px 0 0 250px;
-  text-align: right;
+  text-align: justify;
   color: #707070;
 }
 
 .TextLeft {
   margin: 0px 150px 0 0;
-  text-align: left;
+  text-align: justify;
   color: #707070;
 }
