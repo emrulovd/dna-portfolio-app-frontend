@@ -11,7 +11,7 @@ const AboutGoals = () => {
       <Container fluid>
         <h1 className={classes.Title}>
         <span className={classes.TextDecortion}>&lt;h1</span>
-          Goals
+          Why choose Us?
         <span className={classes.TextDecortion}>/&gt;</span>
         </h1>
         {objectives.map((objective, index) => {

@@ -33,12 +33,13 @@ const AboutMain = () => {
               <span className={classes.TextDecortion}>/&gt;</span>
             </h1>
             <p className={classes.Text}>
-            DNA Code is a small, independent company led by developers. As a small
-            team, we aim at delivering the best possible customer service and experience. 
-            Whilst, providing quality on par with more eastablished companies. Our business 
-            structure allows us to be closer to our customers and provides a direct 
-            connection between developers and clients. Being a small company 
-            does not mean smaller capabilities but better customer knowledge. 
+            DNA Code is a small, independent company led by enthusiastic developers. As a small
+            team, we aim at delivering the best possible customer service and experience, 
+            whilst providing quality on par with more established companies. Our business 
+            structure allows us to be closer to our customers - providing a direct 
+            connection between developers and clients is a top priority of our team. 
+            <p></p>
+            <p>Being a small company does not mean smaller capabilities but better customer knowledge.</p> 
             </p>
           </Col>
         </Row>
