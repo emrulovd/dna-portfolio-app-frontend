@@ -44,24 +44,27 @@
 .BadgeRight {
   float: left;
   width: 96px;
-  margin: 0 0 50px 0 ;
+  margin-bottom: 3rem;
+  padding-top: 0.5rem;
+
 }
 
 
 .BadgeLeft {
   float: right;
   width: 96px;
-  margin: 0 0 50px 0 ;
+  margin-bottom: 3rem;
+  padding-top: 0.5rem;
 }
 
 .TextRight {
-  margin: 0px 0 0 250px;
+  margin: 0px 0 10px 250px;
   text-align: justify;
   color: #707070;
 }
 
 .TextLeft {
-  margin: 0px 150px 0 0;
+  margin: 0px 150px 10px 0;
   text-align: justify;
   color: #707070;
 }

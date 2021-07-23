@@ -27,11 +27,13 @@ const AboutMain = () => {
             <img className={classes.Logo} src={logo} alt="..." />
           </Col>
           <Col md={7}>
-            <h1 className={classes.Title}>
-              <span className={classes.TextDecortion}>&lt;h1</span>
-              <Scramble start={scramble} text="About"/>
-              <span className={classes.TextDecortion}>/&gt;</span>
-            </h1>
+            <Row>
+              <h1 className={classes.Title}>
+                <span className={classes.TextDecortion}>&lt;h1</span>
+                <Scramble start={scramble} text="About"/>
+                <span className={classes.TextDecortion}>/&gt;</span>
+              </h1>
+            </Row>
             <p className={classes.Text}>
             DNA Code is a small, independent company led by enthusiastic developers. As a small
             team, we aim at delivering the best possible customer service and experience, 

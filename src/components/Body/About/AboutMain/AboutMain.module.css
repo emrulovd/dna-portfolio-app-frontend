@@ -6,7 +6,6 @@
 }
 
 .Title{
-    /* text-align: center; */
     padding: 70px 0 0 0;
     text-transform: uppercase;
     font-family: 'Audiowide', cursive;
@@ -18,7 +17,7 @@
     color: #fff;
     font-size: 22px;
     text-align: justify;
-    
+
 }
 
 .Logo{
