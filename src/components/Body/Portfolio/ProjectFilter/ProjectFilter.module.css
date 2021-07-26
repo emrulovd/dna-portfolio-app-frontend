@@ -1,7 +1,14 @@
 .Wrapper{
     background: #000;
     width: 100%;
+    padding:  0 0 0 10%; 
+    display: flex;
+    justify-content: center;
 }
+
+.RowWrapper{
+    display: inline-block;
+ }
 
 .InputImage{
     display: block;
@@ -13,4 +20,9 @@
 .InputImage:hover{
     transform: rotate(1turn)  scale(2, 2);
     transition:all 0.5s ease;
+}
+
+.Arrow{
+    height: 64px;
+    margin: 75px 20px 20px 20px;
 }

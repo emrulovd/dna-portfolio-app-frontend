@@ -32,7 +32,7 @@ const ProjectItem = (props) => {
               <Row>
                 {props.project_technologies.map((tech, index) => {
                   return (
-                    <Col key={index}>
+                    <Col xs={2} key={index}>
                       <img
                         className={classes.ProjectTech}
                         src={tech}
@@ -76,7 +76,7 @@ const ProjectItem = (props) => {
               <Row>
                 {props.project_technologies.map((tech, index) => {
                   return (
-                    <Col md={2} key={index}>
+                    <Col xs={2} key={index}>
                       <img
                         className={classes.ProjectTech}
                         src={tech}
