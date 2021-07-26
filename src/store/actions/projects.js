@@ -18,6 +18,7 @@ export const fetchByIdProject = (id) => {
   return (dispatch) => {
     dispatch(projectActions.isLoading());
     axios.get(URL + id).then((response) => {
+      console.log(response.data)
       dispatch(projectActions.getOneProject(response.data.project));
     });
     dispatch(projectActions.isNotLoading());

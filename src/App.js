@@ -14,6 +14,7 @@ import Home from "./components/Body/Home/Home";
 import About from "./components/Body/About/About";
 import Contact from "./components/Body/Contact/Contact";
 import Portfolio from "./components/Body/Portfolio/Portfolio";
+import ProjectDetails from './components/Body/Portfolio/ProjectDetails/ProjectDetails';
 import Services from "./components/Body/Services/Services";
 import Careers from "./components/Body/Careers/Careers";
 import NotFound from "./components/NotFound/NotFound";
@@ -43,6 +44,7 @@ function App() {
             <Header />
             <main>
               <Switch>
+                <Route path="/portfolio/project/:id" component={ProjectDetails}/>
                 <Route path="/services" component={Services} />
                 <Route path="/portfolio" component={Portfolio} />
                 <Route path="/about" component={About} />
