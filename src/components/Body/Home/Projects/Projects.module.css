@@ -9,6 +9,12 @@
         100% 100%,
         0 calc(100% - 5vw)
       );
+
+}
+
+.InnerWrapper{
+    width: 100vw;
+    height: 100vh;
 }
 
 .TextDecortion{
@@ -32,6 +38,10 @@
 
 .ProjectInfo{
     margin: 50px 100px 0 0;
+}
+
+.ProjectType{
+    text-transform: uppercase;
 }
 
 .ProjectInfo h4{

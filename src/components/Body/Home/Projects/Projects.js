@@ -1,7 +1,8 @@
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Container, Row, Col } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import Aos from "aos";
+import HorizontalScroll from "react-scroll-horizontal";
 
 import { fetchAllProjects } from "../../../../store/actions/projects";
 
@@ -19,32 +20,42 @@ const Projects = () => {
     });
   }, [dispatch]);
 
+
   return (
-    <div className={classes.Wrapper}>
-      <Container fluid data-aos="zoom-in">
-        <h3 className={classes.Title}>
-          <span className={classes.TextDecortion}>&lt;h3</span>
-          Projects
-          <span className={classes.TextDecortion}>/&gt;</span>
-        </h3>
-        <Row>
-          <Col>
-            <img
-              className={classes.ProjectImage}
-              src={projects[0].project_image_collection[0]}
-              alt="..."
-            />
-          </Col>
-          <Col>
-            <div className={classes.ProjectInfo}>
-              <h4>WEB DEVELOPMENT</h4>
-              <h4>{projects[0].project_title}</h4>
-              <p>{projects[0].project_description}</p>
-              <Button className={classes.Button}>See More</Button>
+    <div className={classes.Wrapper} >
+      <h3 className={classes.Title}>
+        <span className={classes.TextDecortion}>&lt;h3</span>
+        Projects
+        <span className={classes.TextDecortion}>/&gt;</span>
+      </h3>
+      <HorizontalScroll
+        pageLock={true}
+        reverseScroll={true}
+      >
+        {projects.map((project, index) => {
+          return (
+            <div className={classes.InnerWrapper} key={index}>
+              <Row>
+                <Col>
+                  <img
+                    className={classes.ProjectImage}
+                    src={project.project_image_collection[0]}
+                    alt="..."
+                  />
+                </Col>
+                <Col>
+                  <div className={classes.ProjectInfo}>
+                    <h4 className={classes.ProjectType}>{project.project_type}</h4>
+                    <h4>{project.project_title}</h4>
+                    <p>{project.project_description}</p>
+                    <Button className={classes.Button}>See More</Button>
+                  </div>
+                </Col>
+              </Row>
             </div>
-          </Col>
-        </Row>
-      </Container>
+          );
+        })}
+      </HorizontalScroll>
     </div>
   );
 };
