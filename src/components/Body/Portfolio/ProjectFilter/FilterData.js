@@ -1,5 +1,5 @@
 import angular from "../../../../assets/technologies/angular.png";
-import react from "../../../../assets/technologies/react.png";
+import react from "../../../../assets/filter/react.png";
 import vue from "../../../../assets/technologies/vue.png";
 import mongo from "../../../../assets/technologies/mongo.png";
 import mysql from "../../../../assets/technologies/mysql.png";
