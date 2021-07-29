@@ -1,4 +1,4 @@
-import React, { useEffect, Suspense } from "react";
+import React, { useEffect, Suspense, Fragment } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
@@ -6,9 +6,11 @@ import { fetchByIdProject } from "../../../../store/actions/projects";
 
 import classes from "./ProjectDetails.module.css";
 import Spinner from '../../../UI/Spinner/Spinner';
+import ProjectTechnologies from "./ProjectTechnologies/ProjectTechnologies";
 const ProjectDetailsHeader = React.lazy(() =>
   import("./ProjectDetailsHeader/ProjectDetailsHeader")
 );
+
 
 const ProjectDetails = () => {
   const { id } = useParams();
@@ -25,7 +27,10 @@ const ProjectDetails = () => {
         {project === null ? (
           <Spinner/>
         ) : (
-          <ProjectDetailsHeader project={project} />
+          <Fragment>
+            <ProjectDetailsHeader project={project} />
+            <ProjectTechnologies project={project} />
+          </Fragment>
         )}
       </Suspense>
     </div>

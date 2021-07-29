@@ -1,0 +1,13 @@
+.Wrapper{
+    background: linear-gradient(210deg, #000 70%, #fff 30%);
+    height: 100vh;
+    width: 100%;
+}
+
+.Title{
+    padding: 50px 0 0 0;
+    text-align: center;
+    color: #fff;
+    font-family: 'Audiowide', cursive;
+    text-transform: uppercase;
+}
