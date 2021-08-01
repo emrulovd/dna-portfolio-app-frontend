@@ -1,0 +1,16 @@
+.Wrapper{
+    height: 50vh;
+    width: 100%;
+    background: #ddd;
+}
+
+
+.Badge{
+    display: block;
+    margin: 140px auto;
+    height: 140px;
+}
+
+.Text{
+    margin: 160px auto;
+}

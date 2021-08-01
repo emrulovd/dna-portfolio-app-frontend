@@ -7,7 +7,7 @@ import { objectives } from "./Content";
 
 const AboutGoals = () => {
   return (
-    <div className={classes.Wrapper}>
+    <div className={classes.Wrapper} id='objectives'>
       <Container fluid>
         <h1 className={classes.Title}>
         <span className={classes.TextDecortion}>&lt;h1</span>
