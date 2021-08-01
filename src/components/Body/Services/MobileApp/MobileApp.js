@@ -1,16 +1,16 @@
 import { Container, Row, Col } from "react-bootstrap";
 
-import classes from "./Business.module.css";
+import classes from "./MobileApp.module.css";
 
-import businessBadge from "../../../../assets/services-icons/bussines-software.png";
+import mobileAppBadge from "../../../../assets/services-icons/mobile-app.png";
 
-const Business = () => {
+const MobileApp = () => {
   return (
     <div className={classes.Wrapper}>
       <Container>
         <Row>
           <Col md={3}>
-            <img className={classes.Badge} src={businessBadge} alt="..." />
+            <img className={classes.Badge} src={mobileAppBadge} alt="..." />
           </Col>
           <div className={classes.Line}></div>
           <Col>
@@ -27,4 +27,4 @@ const Business = () => {
   );
 };
 
-export default Business;
+export default MobileApp;
