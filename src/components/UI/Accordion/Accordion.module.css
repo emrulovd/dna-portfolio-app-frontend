@@ -1,0 +1,49 @@
+.Accordion {
+  width: 100%;
+}
+
+.ContentBox {
+  position: relative;
+  margin: 0 20px;
+}
+
+.LabelWrapper {
+  transition: all 1s ease;
+  border-left: 2px solid #000;
+  border-right: 2px solid #000;
+  cursor: pointer;
+}
+
+.LabelWrapper:hover{
+    background: #000;
+    color: #fff;
+}
+
+.Label {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.Content {
+  transition: all 0.5s ease;
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  overflow-y: hidden;
+  text-align: center;
+  border-bottom: 2px solid transparent;
+}
+
+.ContentActive {
+  transition: all 0.5s ease;
+  height: 100px;
+  text-align: center;
+  border-bottom: 2px solid #000;
+}
+
+.LabelWrapperactive{
+  background: #000;
+  color: #fff;
+  transition: all 1s ease;
+  cursor: pointer;
+}

@@ -1,8 +1,9 @@
 import { Container, Row, Col } from "react-bootstrap";
 
 import classes from "./Business.module.css";
-
 import businessBadge from "../../../../assets/services-icons/bussines-software.png";
+
+import BusinessSoftware from './BusinessSoftware/BusinessSoftware';
 
 const Business = () => {
   return (
@@ -20,6 +21,7 @@ const Business = () => {
               ever since the 1500s, when an unknown printer took a galley of
               type and scrambled it to make a type specimen book.
             </p>
+            <BusinessSoftware />
           </Col>
         </Row>
       </Container>
