@@ -12,10 +12,12 @@ const Header = () => {
   let [logoSymbol, setLogoSymbol] = useState(logoBlack);
 
   useEffect(() => {
+    window.addEventListener("scroll", changeNavabarStatus);
     changeNavabarStatus();
     return () => {
+      window.removeEventListener("scroll", changeNavabarStatus);
       setNavbarStatus({});
-      setLogoSymbol({}) 
+      setLogoSymbol({});
     };
   }, []);
 
@@ -29,7 +31,7 @@ const Header = () => {
     }
   };
 
-  window.addEventListener("scroll", changeNavabarStatus);
+
 
   return (
     <Fragment>

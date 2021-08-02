@@ -12,9 +12,9 @@ import webDevelpomentIcon from "../../../../assets/services-icons/web-developmen
 const Services = () => {
   const icons = [
     { icon: bussinesIcon },
-    { icon: mobileAppIcon },
-    { icon: webDevelpomentIcon },
     { icon: eCommerceIconIcon },
+    { icon: webDevelpomentIcon },
+    { icon: mobileAppIcon },
     { icon: graphicDesignIcon },
   ];
 

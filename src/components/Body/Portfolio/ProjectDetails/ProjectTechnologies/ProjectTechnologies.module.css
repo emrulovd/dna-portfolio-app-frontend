@@ -1,0 +1,30 @@
+.Wrapper{
+    height: 30vh;
+    width: 100%;
+    /* background: linear-gradient(129deg, #fff 50%, #000 50%); */
+    background: #000;
+}
+
+.TechImage{
+    width: 126px;
+    display: block;
+    margin: auto;
+    transition:all 0.5s ease;
+}
+
+.TechImage:hover{
+    transform: rotate(1turn)  scale(1.2, 1.2);
+    transition:all 0.5s ease;
+}
+
+.Title{
+    padding: 20px;
+    text-align: center;
+    font-family: 'Audiowide', cursive;
+    text-transform: uppercase;
+    color: #fff;    
+}
+
+.TextDecortion{
+    color: red;
+}

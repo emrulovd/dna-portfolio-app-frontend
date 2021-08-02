@@ -34,7 +34,9 @@ const Objectives = () => {
             <Col key={index}>
               <div className={classes.Border}>
                 <div className={classes.Layer}>
+                  <a href='/about'>
                   <img className={classes.Badge} src={el.image} alt="..." />
+                  </a>
                 </div>
               </div>
             </Col>

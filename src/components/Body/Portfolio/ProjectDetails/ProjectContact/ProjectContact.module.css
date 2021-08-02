@@ -1,0 +1,16 @@
+.Wrapper{
+    height: 40vh;
+    width: 100%;
+    background: #fff;
+}
+
+.Text{
+    padding: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Audiowide', cursive;
+}
+
+.Button{
+    margin-left: 50%;
+}

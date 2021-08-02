@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { useHistory } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { Row, Col } from "react-bootstrap";
 import Aos from "aos";
@@ -10,8 +11,9 @@ import Button from "../../../UI/Button/Button";
 import classes from "./Projects.module.css";
 
 const Projects = () => {
-  const projects = useSelector((state) => state.project.projects);
+  const history = useHistory();
   const dispatch = useDispatch();
+  const projects = useSelector((state) => state.project.projects);
 
   useEffect(() => {
     dispatch(fetchAllProjects());
@@ -20,18 +22,18 @@ const Projects = () => {
     });
   }, [dispatch]);
 
+  const detailProjectNavigationHandler = (project_id) => {
+    history.push(`/portfolio/project/${project_id}`);
+  };
 
   return (
-    <div className={classes.Wrapper} >
+    <div className={classes.Wrapper}>
       <h3 className={classes.Title}>
         <span className={classes.TextDecortion}>&lt;h3</span>
         Projects
         <span className={classes.TextDecortion}>/&gt;</span>
       </h3>
-      <HorizontalScroll
-        pageLock={true}
-        reverseScroll={true}
-      >
+      <HorizontalScroll reverseScroll={true}>
         {projects.map((project, index) => {
           return (
             <div className={classes.InnerWrapper} key={index}>
@@ -45,10 +47,19 @@ const Projects = () => {
                 </Col>
                 <Col>
                   <div className={classes.ProjectInfo}>
-                    <h4 className={classes.ProjectType}>{project.project_type}</h4>
+                    <h4 className={classes.ProjectType}>
+                      {project.project_type}
+                    </h4>
                     <h4>{project.project_title}</h4>
                     <p>{project.project_description}</p>
-                    <Button className={classes.Button}>See More</Button>
+                    <Button
+                      className={classes.Button}
+                      onClick={() =>
+                        detailProjectNavigationHandler(project._id)
+                      }
+                    >
+                      See More
+                    </Button>
                   </div>
                 </Col>
               </Row>

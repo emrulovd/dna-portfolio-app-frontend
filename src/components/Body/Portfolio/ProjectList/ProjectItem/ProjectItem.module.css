@@ -7,12 +7,12 @@
 }
 
 .ProjectInfoRight{
-    margin: 70px 100px 0 0;
+    margin: 20px 100px 0 0;
     color: #fff;
 }
 
 .ProjectInfoLeft{
-    margin: 70px 0px 0 120px;
+    margin: 20px 0px 0 120px;
     float: left;
     color: #fff;
 }
@@ -23,6 +23,18 @@
 
 .ProjectInfo h4{
     margin-bottom: 20px; 
+}
+
+
+.ProjectTech{
+    width: 64px;
+    display: block;
+    margin: 5px auto;
+    transition:all 0.5s;
+}
+
+.ProjectTech:hover{
+    transform: scale(1.5, 1.5);
 }
 
 .Button {

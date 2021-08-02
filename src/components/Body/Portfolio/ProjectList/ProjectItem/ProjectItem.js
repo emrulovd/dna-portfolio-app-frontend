@@ -1,17 +1,23 @@
 import { Fragment, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 import Aos from "aos";
-import { Col } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 
 import classes from "./ProjectItem.module.css";
 
 import Button from "../../../../UI/Button/Button";
 
 const ProjectItem = (props) => {
+  const history = useHistory();
   useEffect(() => {
     Aos.init({
       duration: 1000,
     });
   });
+
+  const projectDetailsNavigationHandler = () => {
+    history.push(`/portfolio/project/${props.project_id}`);
+  };
 
   return (
     <Fragment>
@@ -22,7 +28,26 @@ const ProjectItem = (props) => {
               <h4 className={classes.ProjectType}>{props.project_type}</h4>
               <h4>{props.project_title}</h4>
               <p>{props.project_description}</p>
-              <Button className={classes.Button}>See More</Button>
+              <h6>Technologies:</h6>
+              <Row>
+                {props.project_technologies.map((tech, index) => {
+                  return (
+                    <Col xs={2} key={index}>
+                      <img
+                        className={classes.ProjectTech}
+                        src={tech}
+                        alt="..."
+                      />
+                    </Col>
+                  );
+                })}
+              </Row>
+              <Button
+                className={classes.Button}
+                onClick={projectDetailsNavigationHandler}
+              >
+                See More
+              </Button>
             </div>
           </Col>
           <Col data-aos="fade-up">
@@ -47,7 +72,26 @@ const ProjectItem = (props) => {
               <h4 className={classes.ProjectType}>{props.project_type}</h4>
               <h4>{props.project_title}</h4>
               <p>{props.project_description}</p>
-              <Button className={classes.Button}>See More</Button>
+              <h6>Technologies:</h6>
+              <Row>
+                {props.project_technologies.map((tech, index) => {
+                  return (
+                    <Col xs={2} key={index}>
+                      <img
+                        className={classes.ProjectTech}
+                        src={tech}
+                        alt="..."
+                      />
+                    </Col>
+                  );
+                })}
+              </Row>
+              <Button
+                className={classes.Button}
+                onClick={projectDetailsNavigationHandler}
+              >
+                See More
+              </Button>
             </div>
           </Col>
         </Fragment>

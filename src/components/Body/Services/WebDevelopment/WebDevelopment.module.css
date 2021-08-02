@@ -1,0 +1,25 @@
+.Wrapper{
+    height: 50vh;
+    width: 100%;
+    background: url('../../../../assets//backgrounds/services/services-background-3.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+
+.Badge{
+    display: block;
+    margin: 120px auto;
+    height: 140px;
+}
+
+.Line{
+    border: 1px solid #fff;
+    height: 270px;
+    margin: 60px 20px 0 0;
+    background: #fff;
+}
+
+.Text{
+    margin: 100px 0 50px 0;
+}

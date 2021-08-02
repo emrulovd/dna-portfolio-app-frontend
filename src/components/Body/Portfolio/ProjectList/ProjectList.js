@@ -13,10 +13,12 @@ const ProjectList = (props) => {
           return (
             <Row key={index}>
               <ProjectItem
+                project_id={project._id}
                 project_index={index}
                 project_title={project.project_title}
                 project_type={project.project_type}
                 project_description={project.project_description}
+                project_technologies={project.project_technologies_images}
                 project_image={project.project_image_collection[0]}
               />
             </Row>
