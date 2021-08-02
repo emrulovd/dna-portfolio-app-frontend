@@ -1,9 +1,13 @@
 import classes from './Positions.module.css';
 
+import PositionsHeader from './PositionsHeader/PositionsHeader';
+import PositionsList from './PositionsList/PositionsList';
+
 const Positions = () => {
     return(
         <div className={classes.Wrapper}>
-            <h1>Positions</h1>
+            <PositionsHeader/>
+            <PositionsList/>
         </div>
     )
 }

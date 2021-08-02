@@ -1,0 +1,32 @@
+.Wrapper{
+    height: 30vh;
+    width: 100%;
+    background: #fff;
+    align-items: center;
+}
+
+.Title{
+    margin: 80px;
+    text-align: center;
+    font-family: 'Audiowide', cursive;
+    text-transform: uppercase;
+}
+
+.Search{
+    display: block;
+    margin: auto;
+    width: 500px;
+    border: none;
+}
+
+.Search:focus{
+    border: none;
+}
+
+.SearcBorder{
+    display: block;
+    margin: auto;
+    width: 500px;
+    border: 1px solid #000;
+    box-shadow: 0 0 10px #000, 0 0 40px #000, 0 0 80px #000;
+}
