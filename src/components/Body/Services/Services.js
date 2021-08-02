@@ -10,6 +10,7 @@ import GraphicDesign from "./GraphicDesign/GraphicDesign";
 const Services = () => {
   return (
     <div className={classes.Wrapper}>
+      <h1 className={classes.Title}>Services</h1>
       <Header />
       <Business />
       <ECommerce />

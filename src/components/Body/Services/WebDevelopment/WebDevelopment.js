@@ -4,6 +4,8 @@ import classes from "./WebDevelopment.module.css";
 
 import webDevelopmentBadge from "../../../../assets/services-icons/web-development.png";
 
+import WebSoftware from "./WebSoftware/WebSoftware";
+
 const WebDevelopment = () => {
   return (
     <div className={classes.Wrapper}>
@@ -24,6 +26,7 @@ const WebDevelopment = () => {
               ever since the 1500s, when an unknown printer took a galley of
               type and scrambled it to make a type specimen book.
             </p>
+            <WebSoftware/>
           </Col>
         </Row>
       </Container>

@@ -17,7 +17,7 @@ const Accordion = (props) => {
     <div className={classes.Accordion}>
       <div className={toggle ? classes.ContentBox + classes.Active : classes.ContentBox }>
         <div className={ toggle ? classes.LabelWrapperactive : classes.LabelWrapper} onClick={onToggleHandler}>
-          <h4 className={classes.Label}>{props.label}</h4>
+          <h6 className={classes.Label}>{props.label}</h6>
         </div>
         <div className={toggle ? classes.ContentActive : classes.Content}>
           <p>{props.content}</p>

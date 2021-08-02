@@ -3,6 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import classes from "./GraphicDesign.module.css";
 
 import graphicDesignBadge from "../../../../assets/services-icons/graphic-design.png";
+import DesignServices from "./DesignServices/DesignServices";
 
 const GraphicDesign = () => {
   return (
@@ -20,7 +21,7 @@ const GraphicDesign = () => {
               ever since the 1500s, when an unknown printer took a galley of
               type and scrambled it to make a type specimen book.
             </p>
-            
+            <DesignServices />
           </Col>
         </Row>
       </Container>

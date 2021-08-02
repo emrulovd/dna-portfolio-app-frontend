@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
 import classes from "./Header.module.css";
@@ -22,19 +23,23 @@ const Header = () => {
       <Container fluid>
         <h3 className={classes.Title}>
           <span className={classes.TextDecoration}>&lt;h3</span>
-            What do we offer
+          What do we offer
           <span className={classes.TextDecoration}>/&gt;</span>
         </h3>
         <div className={classes.RowWrapper}>
-        <Row>
-          {services.map((service, index) => {
+          <Row>
+            {services.map((service, index) => {
               return (
-                  <Col key={index} xs={2}>
-                <img className={classes.Badge} src={service.badge} alt="..." />
-              </Col>
-            );
-        })}
-        </Row>
+                <Col key={index} xs={2}>
+                  <img
+                    className={classes.Badge}
+                    src={service.badge}
+                    alt="..."
+                  />
+                </Col>
+              );
+            })}
+          </Row>
         </div>
       </Container>
     </div>

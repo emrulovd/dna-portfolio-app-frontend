@@ -4,6 +4,8 @@ import classes from "./eCommerce.module.css";
 
 import eCommerceBadge from "../../../../assets/services-icons/e-commerce.png";
 
+import ECommerceSoftware from "./ECommerceSoftware/ECommerceSoftware";
+
 const eCommerce = () => {
   return (
     <div className={classes.Wrapper}>
@@ -20,6 +22,7 @@ const eCommerce = () => {
               ever since the 1500s, when an unknown printer took a galley of
               type and scrambled it to make a type specimen book.
             </p>
+            <ECommerceSoftware/>
           </Col>
         </Row>
       </Container>

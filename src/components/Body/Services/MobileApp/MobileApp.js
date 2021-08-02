@@ -4,6 +4,8 @@ import classes from "./MobileApp.module.css";
 
 import mobileAppBadge from "../../../../assets/services-icons/mobile-app.png";
 
+import MobileSoftware from "./MobileSoftware/MobileSoftware";
+
 const MobileApp = () => {
   return (
     <div className={classes.Wrapper}>
@@ -20,6 +22,7 @@ const MobileApp = () => {
               ever since the 1500s, when an unknown printer took a galley of
               type and scrambled it to make a type specimen book.
             </p>
+            <MobileSoftware/>
           </Col>
         </Row>
       </Container>
