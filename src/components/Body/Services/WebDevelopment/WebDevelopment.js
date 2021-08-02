@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import Aos from "aos";
 import { Container, Row, Col } from "react-bootstrap";
 
 import classes from "./WebDevelopment.module.css";
@@ -7,9 +9,14 @@ import webDevelopmentBadge from "../../../../assets/services-icons/web-developme
 import WebSoftware from "./WebSoftware/WebSoftware";
 
 const WebDevelopment = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 2000,
+    });
+  });
   return (
-    <div className={classes.Wrapper}>
-      <Container>
+    <div className={classes.Wrapper} id='web'>
+      <Container data-aos="fade-up">
         <Row>
           <Col md={3}>
             <img
@@ -26,7 +33,7 @@ const WebDevelopment = () => {
               ever since the 1500s, when an unknown printer took a galley of
               type and scrambled it to make a type specimen book.
             </p>
-            <WebSoftware/>
+            <WebSoftware />
           </Col>
         </Row>
       </Container>

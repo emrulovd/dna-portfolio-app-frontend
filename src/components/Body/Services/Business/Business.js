@@ -1,14 +1,21 @@
+import { useEffect } from "react";
+import Aos from "aos";
 import { Container, Row, Col } from "react-bootstrap";
 
 import classes from "./Business.module.css";
 import businessBadge from "../../../../assets/services-icons/bussines-software.png";
 
-import BusinessSoftware from './BusinessSoftware/BusinessSoftware';
+import BusinessSoftware from "./BusinessSoftware/BusinessSoftware";
 
 const Business = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 2000,
+    });
+  });
   return (
-    <div className={classes.Wrapper}>
-      <Container>
+    <div className={classes.Wrapper} id='business'>
+      <Container data-aos="fade-up">
         <Row>
           <Col md={3}>
             <img className={classes.Badge} src={businessBadge} alt="..." />

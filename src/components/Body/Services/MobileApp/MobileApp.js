@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import Aos from 'aos';
 import { Container, Row, Col } from "react-bootstrap";
 
 import classes from "./MobileApp.module.css";
@@ -7,9 +9,14 @@ import mobileAppBadge from "../../../../assets/services-icons/mobile-app.png";
 import MobileSoftware from "./MobileSoftware/MobileSoftware";
 
 const MobileApp = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 2000
+    })
+  });
   return (
-    <div className={classes.Wrapper}>
-      <Container>
+    <div className={classes.Wrapper} id='mobile'>
+      <Container data-aos='fade-up'>
         <Row>
           <Col md={3}>
             <img className={classes.Badge} src={mobileAppBadge} alt="..." />

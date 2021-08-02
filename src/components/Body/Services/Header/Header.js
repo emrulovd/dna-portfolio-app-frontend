@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import Aos from "aos";
 import { Container, Row, Col } from "react-bootstrap";
 
 import classes from "./Header.module.css";
@@ -11,15 +12,21 @@ import webDevelopment from "../../../../assets/services-icons/web-development.pn
 
 const Header = () => {
   const services = [
-    { badge: bussinesSoftware },
-    { badge: eCommerce },
-    { badge: webDevelopment },
-    { badge: mobileApp },
-    { badge: graphicDesign },
+    { badge: bussinesSoftware, link: "#business" },
+    { badge: eCommerce, link: "#ecommerce" },
+    { badge: webDevelopment, link: "#web" },
+    { badge: mobileApp, link: "#mobile" },
+    { badge: graphicDesign, link: "#graphicdesign" },
   ];
 
+  useEffect(() => {
+    Aos.init({
+      durattion: 2000,
+    });
+  });
+
   return (
-    <div className={classes.Wrapper}>
+    <div className={classes.Wrapper} data-aos="fade-up">
       <Container fluid>
         <h3 className={classes.Title}>
           <span className={classes.TextDecoration}>&lt;h3</span>
@@ -31,11 +38,13 @@ const Header = () => {
             {services.map((service, index) => {
               return (
                 <Col key={index} xs={2}>
-                  <img
-                    className={classes.Badge}
-                    src={service.badge}
-                    alt="..."
-                  />
+                  <a href={service.link}>
+                    <img
+                      className={classes.Badge}
+                      src={service.badge}
+                      alt="..."
+                    />
+                  </a>
                 </Col>
               );
             })}

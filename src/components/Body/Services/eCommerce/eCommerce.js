@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import Aos from 'aos';
 import { Container, Row, Col } from "react-bootstrap";
 
 import classes from "./eCommerce.module.css";
@@ -6,10 +8,15 @@ import eCommerceBadge from "../../../../assets/services-icons/e-commerce.png";
 
 import ECommerceSoftware from "./ECommerceSoftware/ECommerceSoftware";
 
-const eCommerce = () => {
+const ECommerce = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 2000
+    })
+  })
   return (
-    <div className={classes.Wrapper}>
-      <Container>
+    <div className={classes.Wrapper} id='ecommerce'>
+      <Container data-aos='fade-up'>
         <Row>
           <Col md={3}>
             <img className={classes.Badge} src={eCommerceBadge} alt="..." />
@@ -30,4 +37,4 @@ const eCommerce = () => {
   );
 };
 
-export default eCommerce;
+export default ECommerce;
