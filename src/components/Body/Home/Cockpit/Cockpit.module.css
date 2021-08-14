@@ -21,7 +21,8 @@
 }
 
 .TextWrapper{
-    margin: 100px 0 0 10% ;
+    margin: 200px 7% 0 0 ;
+    float: right;
 }
 
 .Title{
@@ -37,8 +38,8 @@
 } 
 
 .Button_Learn{
-    margin: 50px 0px 0 80px;
-    width: 14%;
+    margin: 50px 0px 0 85px;
+    width: 40%;
 }
 
 .Button_Contact{

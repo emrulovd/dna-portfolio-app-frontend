@@ -25,7 +25,10 @@ const Button = (props) => {
       break;
     case "white":
       buttonType = (
-        <a className={`${classes.AnchorWhite} ${props.className}`} href={() => false}>
+        <a
+          className={`${classes.AnchorWhite} ${props.className}`}
+          href={() => false}
+        >
           <span></span>
           <span></span>
           <span></span>
@@ -40,9 +43,32 @@ const Button = (props) => {
         </a>
       );
       break;
+    case "transparent":
+      buttonType = (
+        <a
+          className={`${classes.AnchorTransparent} ${props.className}`}
+          href={() => false}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <button
+            className={classes.ButtonTransparent}
+            type={props.buttonType}
+            onClick={props.onClick}
+          >
+            {props.children}
+          </button>
+        </a>
+      );
+      break;
     default:
       buttonType = (
-        <a className={`${classes.Anchor} ${props.className}`} href={() => false}>
+        <a
+          className={`${classes.Anchor} ${props.className}`}
+          href={() => false}
+        >
           <span></span>
           <span></span>
           <span></span>

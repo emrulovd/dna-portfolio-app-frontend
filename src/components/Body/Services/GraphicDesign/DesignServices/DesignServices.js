@@ -10,12 +10,12 @@ const DesignServices = () => {
     {
       title: "UI/UX",
       content:
-        "UI/UX is very good for every business please give us money so we can buy ferrari",
+        "Our UX/UI expertise will create and design powerful and intuitive digital experiences ensuring tailored to your business goals and objectives",
     },
     {
       title: "Web Design",
       content:
-        "ERP is very good for every business please give us money so we can buy ferrari",
+        "As being one of the crucial parts of websites, our graphic designer team following frameworks and established design standards will deliver user-friendly and client-focused solution.",
     },
     {
       title: "Mobile Design",

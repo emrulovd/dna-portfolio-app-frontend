@@ -23,10 +23,10 @@ const GraphicDesign = () => {
           <div className={classes.Line}></div>
           <Col>
             <p className={classes.Text}>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
+              By gathering and analyzing the requirments of the client our graphic design 
+              experties strive to provide customers with exceptional results. Whether the 
+              customer needs just a logo or entire system design, DNA's graphic designer team
+              will deliver design beyond the client's expectations.
             </p>
             <DesignServices />
           </Col>

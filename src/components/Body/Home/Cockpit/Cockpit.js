@@ -39,7 +39,7 @@ const Cockpit = () => {
             <Container fluid>
               <Row>
                 <Col>
-                  <Button className={classes.Button_Learn} buttonTheme="white" onClick={navigateToServicesHandler}>
+                  <Button className={classes.Button_Learn} buttonTheme="transparent" onClick={navigateToServicesHandler}>
                     Learn More
                   </Button>
                 </Col>

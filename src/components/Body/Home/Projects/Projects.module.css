@@ -1,7 +1,9 @@
 .Wrapper{
     height: 90vh;
     width: 100%;
-    background: #000;
+    background: url('../../../../assets/backgrounds/home/background-home-projects.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
     color: #fff;
     clip-path: polygon(
         0 0,
