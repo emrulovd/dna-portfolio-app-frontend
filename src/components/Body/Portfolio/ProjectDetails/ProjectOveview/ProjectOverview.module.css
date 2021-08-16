@@ -1,0 +1,28 @@
+.Wrapper{
+    margin: 50px auto;
+    height: 100%;
+    width: 100%;
+}
+
+.Title{
+    font-family: 'Audiowide', cursive;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.InnerWrapper{
+    margin: 50px auto;
+}
+
+.SecondaryRow{
+    margin: 10%;
+}
+
+.ProjectLogo{
+    width: 450px;
+}
+
+.Text{
+    margin: 30px 0 0 0;
+}
+

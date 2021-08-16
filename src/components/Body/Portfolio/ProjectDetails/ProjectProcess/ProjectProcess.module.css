@@ -1,0 +1,10 @@
+.Wrapper{
+    height: 60vh; 
+    width: 100%;
+}
+
+.Title{
+    text-align: center;
+    font-family: 'Audiowide', cursive;
+    text-transform: uppercase;
+}

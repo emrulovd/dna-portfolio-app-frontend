@@ -16,13 +16,13 @@ const ECommerce = () => {
   })
   return (
     <div className={classes.Wrapper} id='ecommerce'>
-      <Container data-aos='fade-up'>
+      <Container >
         <Row>
-          <Col md={3}>
+          <Col md={3} data-aos='fade-up'>
             <img className={classes.Badge} src={eCommerceBadge} alt="..." />
           </Col>
           <div className={classes.Line}></div>
-          <Col>
+          <Col data-aos='fade-up'>
             <p className={classes.Text}>
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text

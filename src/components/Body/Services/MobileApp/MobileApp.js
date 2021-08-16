@@ -16,13 +16,13 @@ const MobileApp = () => {
   });
   return (
     <div className={classes.Wrapper} id='mobile'>
-      <Container data-aos='fade-up'>
+      <Container >
         <Row>
-          <Col md={3}>
+          <Col md={3} data-aos="fade-up">
             <img className={classes.Badge} src={mobileAppBadge} alt="..." />
           </Col>
           <div className={classes.Line}></div>
-          <Col>
+          <Col data-aos="fade-up">
             <p className={classes.Text}>
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text

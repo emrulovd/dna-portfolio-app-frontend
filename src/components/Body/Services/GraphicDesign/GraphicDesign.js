@@ -15,13 +15,13 @@ const GraphicDesign = () => {
   });
   return (
     <div className={classes.Wrapper} id='graphicdesign'>
-      <Container data-aos="fade-up">
+      <Container >
         <Row>
-          <Col md={3}>
+          <Col md={3} data-aos="fade-up">
             <img className={classes.Badge} src={graphicDesignBadge} alt="..." />
           </Col>
           <div className={classes.Line}></div>
-          <Col>
+          <Col data-aos="fade-up">
             <p className={classes.Text}>
               By gathering and analyzing the requirments of the client our graphic design 
               experties strive to provide customers with exceptional results. Whether the 
