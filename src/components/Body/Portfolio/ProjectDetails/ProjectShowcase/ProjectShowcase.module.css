@@ -1,0 +1,22 @@
+.Wrapper{
+    height: 100%;
+    width: 100%;
+}
+
+.RowWrapper{
+    margin: 100px;
+}
+
+.Title{
+    text-align: center;
+    font-family: 'Audiowide', cursive;
+    text-transform: uppercase;
+}
+
+.TextDecortion{
+    color: red;
+}
+
+.Video{
+    width: 600px;
+}

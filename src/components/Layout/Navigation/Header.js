@@ -6,6 +6,7 @@ import logoWhite from "../../../assets/dna-code-symbol.png";
 import classes from "./Header.module.css";
 import NavigationItems from "./NavigationItems/NavigationItems";
 import DynamicNavigationItems from "./DynamicNavigationItems/DynamicNavigationItems";
+import OpenElement from "../../UI/OpenElement/OpenElement";
 
 const Header = () => {
   const [navbarStatus, setNavbarStatus] = useState(false);
@@ -36,6 +37,7 @@ const Header = () => {
   return (
     <Fragment>
       <header className={navbarStatus ? classes.Active : classes.Deactive}>
+        <OpenElement className={classes.OpenElementPosition}/>
         <nav>
           <DynamicNavigationItems />
         </nav>

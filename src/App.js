@@ -10,6 +10,7 @@ import "./App.css";
 import Admin from "./components/Admin/Admin";
 import Auth from "./components/Auth/Auth";
 import Header from "./components/Layout/Navigation/Header";
+import SideDrawer from "./components/Layout/SideDrawer/SideDrawer";
 import Home from "./components/Body/Home/Home";
 import About from "./components/Body/About/About";
 import Contact from "./components/Body/Contact/Contact";
@@ -24,6 +25,7 @@ import Spinner from "./components/UI/Spinner/Spinner";
 function App() {
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
   const isLoading = useSelector((state) => state.project.isLoading);
+  const isOpen = useSelector((state) => state.drawer.isOpen)
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -42,6 +44,7 @@ function App() {
           {isAuthenticated && <Route path="/admin" component={Admin} />}
           <Route path="" exact>
             <Header />
+            {isOpen && <SideDrawer/>}
             <main>
               <Switch>
                 <Route path="/portfolio/project/:id" component={ProjectDetails}/>

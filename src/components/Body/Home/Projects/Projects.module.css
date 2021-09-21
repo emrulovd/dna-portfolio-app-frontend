@@ -1,53 +1,135 @@
-.Wrapper{
-    height: 90vh;
-    width: 100%;
-    background: #000;
-    color: #fff;
-    clip-path: polygon(
-        0 0,
-        100% 0%,
-        100% 100%,
-        0 calc(100% - 5vw)
-      );
+.Wrapper {
+  height: 100vh;
+  width: 100%;
+  background: url("../../../../assets/backgrounds/home/background-home-projects.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  color: #fff;
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 calc(100% - 5vw));
 }
 
-
-.InnerWrapper{
-    width: 100vw;
-    height: 100vh;
+.InnerWrapper {
+  width: 100vw;
+  height: 100vh;
 }
 
-.TextDecortion{
-    color: red;
-    font-size: 12;
-    font-weight: lighter;
-}   
-
-.Title{
-    text-align: center;
-    font-family: 'Audiowide', cursive;
-    text-transform: uppercase;
-    padding: 50px 0 50px 0;
+.TextDecortion {
+  color: red;
+  font-size: 12;
+  font-weight: lighter;
 }
 
-.ProjectImage{
-    display: block;
-    margin: auto;
-    width: 600px;
+.Title {
+  text-align: center;
+  font-family: "Audiowide", cursive;
+  text-transform: uppercase;
+  padding: 50px 0 50px 0;
 }
 
-.ProjectInfo{
-    margin: 50px 100px 0 0;
+.ProjectImage {
+  display: block;
+  margin: auto;
+  width: 600px;
 }
 
-.ProjectType{
-    text-transform: uppercase;
+.ProjectInfo {
+  padding: 50px 100px 0 0;
 }
 
-.ProjectInfo h4{
-    margin-bottom: 20px; 
+.ProjectType {
+  text-transform: uppercase;
+}
+
+.ProjectInfo h4 {
+  margin-bottom: 20px;
 }
 
 .Button {
-    margin: 70px 0 0 80px;
+  margin: 70px 0 0 80px;
+}
+
+@media all and (min-width: 1024px) and (max-width: 1300px) {
+  .Button {
+    margin: 70px 0 0 100px;
+    width: 200px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  .ProjectInfo {
+    padding: 20px 50px 0 0;
+  }
+
+  .ProjectInfo h4 {
+    font-size: 20px;
+  }
+
+  .ProjectInfo p {
+    font-size: 14px;
+  }
+
+  .ProjectImage {
+    width: 450px;
+  }
+
+  .Button {
+    margin: 70px 0 0 100px;
+    width: 200px;
+  }
+}
+
+@media all and (min-width: 468px) and (max-width: 768px) {
+ 
+  .InnerWrapper {
+    height: 100%;
+  }
+  .ProjectInfo {
+    text-align: center;
+    padding: 20px 70px 0 70px;
+  }
+  .ProjectImage {
+    width: 450px;
+  }
+  .ProjectInfo h4 {
+    font-size: 20px;
+  }
+
+  .ProjectInfo p {
+    font-size: 14px;
+  }
+
+  .Button {
+    margin: 70px 0 0 0px;
+    width: 200px;
+  }
+}
+
+
+@media all and (max-width: 468px){
+  .Wrapper{
+    height: 120vh;
+  }
+  
+  .InnerWrapper {
+    height: 100%;
+  }
+  .ProjectInfo {
+    text-align: justify;
+    padding: 15px 40px 0 40px;
+  }
+  .ProjectImage {
+    width: 330px;
+  }
+  .ProjectInfo h4 {
+    font-size: 20px;
+  }
+
+  .ProjectInfo p {
+    font-size: 14px;
+  }
+
+  .Button {
+    margin: 30px 0 0 0px;
+    width: 200px;
+  }
 }

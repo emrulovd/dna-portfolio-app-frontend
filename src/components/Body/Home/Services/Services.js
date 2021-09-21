@@ -25,8 +25,8 @@ const Services = () => {
   }, []);
 
   return (
-    <div className={classes.Wrapper} data-aos="zoom-in">
-      <Container fluid>
+    <div className={classes.Wrapper} >
+      <Container fluid data-aos="fade-up">
         <h3 className={classes.Title}>
           <span className={classes.TextDecortion}>&lt;h3</span>
           Software Development
@@ -36,7 +36,7 @@ const Services = () => {
           {icons.map((icon, index) => {
             return (
               <Col key={index}>
-                <img className={classes.Icon} src={icon.icon} alt="..." />
+                <img className={classes.Icon} src={icon.icon} alt="icon of every single service that the company offers" />
               </Col>
             );
           })}

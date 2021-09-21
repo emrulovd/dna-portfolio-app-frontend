@@ -3,7 +3,7 @@ import Aos from "aos";
 
 import { Container, Row, Col } from "react-bootstrap";
 import classes from "./About.module.css";
-import video from "../../../../assets/dna-logo-animation.mp4";
+import logo from '../../../../assets/dna-code-white.png'
 
 import Scramble from "../../../../helpers/animation/Scramble";
 import Objectives from "./Objectives/Objectives";
@@ -27,22 +27,15 @@ const About = () => {
 
   return (
     <div className={classes.Wrapper}>
-      <Container>
+      <Container data-aos="fade-up">
         <Row>
           <Col sm={4}>
-            <div data-aos="zoom-in">
-              <video
-                className={classes.Logo}
-                autoPlay
-                muted
-                loop
-                src={video}
-                type="video/mp4"
-              ></video>
+            <div >
+              <img className={classes.Logo} src={logo} alt="Logo of the software company"/>
             </div>
           </Col>
           <Col sm={7}>
-            <div className={classes.Text} data-aos="zoom-in">
+            <div className={classes.Text} >
               <h3>
                 <span className={classes.TextDecortion}>&lt;h3</span>
                     <Scramble start={scramble} text="About us" />
@@ -59,7 +52,7 @@ const About = () => {
         </Row>
       </Container>
       <Container fluid>
-        <Row data-aos="zoom-in">
+        <Row data-aos="fade-up">
           <Objectives />
         </Row>
       </Container>

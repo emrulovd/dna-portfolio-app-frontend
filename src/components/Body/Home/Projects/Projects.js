@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { Row, Col } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import Aos from "aos";
 import HorizontalScroll from "react-scroll-horizontal";
 
@@ -27,47 +27,49 @@ const Projects = () => {
   };
 
   return (
-    <div className={classes.Wrapper}>
-      <h3 className={classes.Title}>
-        <span className={classes.TextDecortion}>&lt;h3</span>
-        Projects
-        <span className={classes.TextDecortion}>/&gt;</span>
-      </h3>
-      <HorizontalScroll reverseScroll={true}>
-        {projects.map((project, index) => {
-          return (
-            <div className={classes.InnerWrapper} key={index}>
-              <Row>
-                <Col>
-                  <img
-                    className={classes.ProjectImage}
-                    src={project.project_image_collection[0]}
-                    alt="..."
-                  />
-                </Col>
-                <Col>
-                  <div className={classes.ProjectInfo}>
-                    <h4 className={classes.ProjectType}>
-                      {project.project_type}
-                    </h4>
-                    <h4>{project.project_title}</h4>
-                    <p>{project.project_description}</p>
-                    <Button
-                      className={classes.Button}
-                      onClick={() =>
-                        detailProjectNavigationHandler(project._id)
-                      }
-                    >
-                      See More
-                    </Button>
-                  </div>
-                </Col>
-              </Row>
-            </div>
-          );
-        })}
-      </HorizontalScroll>
-    </div>
+      <div className={classes.Wrapper}>
+        <h3 className={classes.Title}>
+          <span className={classes.TextDecortion}>&lt;h3</span>
+          Projects
+          <span className={classes.TextDecortion}>/&gt;</span>
+        </h3>
+        <HorizontalScroll reverseScroll={true}>
+          {projects.map((project, index) => {
+            return (
+              <div className={classes.InnerWrapper} key={index}>
+                {/* <Container> */}
+                <Row>
+                  <Col>
+                    <img
+                      className={classes.ProjectImage}
+                      src={project.project_image_collection[0]}
+                      alt="..."
+                    />
+                  </Col>
+                  <Col>
+                    <div className={classes.ProjectInfo}>
+                      <h4 className={classes.ProjectType}>
+                        {project.project_type}
+                      </h4>
+                      <h4>{project.project_title}</h4>
+                      <p>{project.project_description}</p>
+                      <Button
+                        className={classes.Button}
+                        onClick={() =>
+                          detailProjectNavigationHandler(project._id)
+                        }
+                      >
+                        See More
+                      </Button>
+                    </div>
+                  </Col>
+                </Row>
+                {/* </Container> */}
+              </div>
+            );
+          })}
+        </HorizontalScroll>
+      </div>
   );
 };
 

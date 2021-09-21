@@ -31,7 +31,7 @@ const Objectives = () => {
       <Row>
         {images.map((el, index) => {
           return (
-            <Col key={index}>
+            <Col className={classes.Column} key={index}>
               <div className={classes.Border}>
                 <div className={classes.Layer}>
                   <a href='/about'>

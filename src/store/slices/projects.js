@@ -22,6 +22,15 @@ const projectSlice = createSlice({
     getOneProject(state, actions) {
       state.project = actions.payload;
     },
+    addProject(state, actions){
+      let updatedProjects = state.projects;
+      updatedProjects.push(actions.payload);
+      state.projects = updatedProjects;
+    },
+    deleteProject(state, actions){
+      const updatedProjects = state.projects.filter(project => project._id !== actions.payload);
+      state.projects = updatedProjects;
+    }
   },
 });
 

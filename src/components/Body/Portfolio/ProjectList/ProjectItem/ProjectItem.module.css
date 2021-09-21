@@ -1,42 +1,148 @@
-
-
-.ProjectImage{
-    display: block;
-    margin: 20px auto;
-    width: 550px;
+.ReverseWrapper {
+    width: 100%;
+    height: 100%;
 }
 
-.ProjectInfoRight{
-    margin: 20px 100px 0 0;
-    color: #fff;
+.ProjectImage {
+  display: block;
+  margin: 20px auto;
+  width: 550px;
 }
 
-.ProjectInfoLeft{
-    margin: 20px 0px 0 120px;
-    float: left;
-    color: #fff;
+.ProjectInfoRight {
+  margin: 20px 100px 0 0;
+  color: #fff;
 }
 
-.ProjectType{
-    text-transform: uppercase;
+.ProjectInfoLeft {
+  margin: 20px 0px 0 120px;
+  float: left;
+  color: #fff;
 }
 
-.ProjectInfo h4{
-    margin-bottom: 20px; 
+.ProjectType {
+  text-transform: uppercase;
 }
 
-
-.ProjectTech{
-    width: 64px;
-    display: block;
-    margin: 5px auto;
-    transition:all 0.5s;
+.ProjectInfo h4 {
+  margin-bottom: 20px;
 }
 
-.ProjectTech:hover{
-    transform: scale(1.5, 1.5);
+.ProjectTech {
+  width: 64px;
+  display: block;
+  margin: 5px auto;
+  transition: all 0.5s;
+}
+
+.ProjectTech:hover {
+  transform: scale(1.5, 1.5);
 }
 
 .Button {
-    margin: 70px 0 0 80px;
+  margin: 70px 0 0 80px;
+}
+
+@media all and (min-width: 1000px) and (max-width: 1300px) {
+  .ProjectInfoRight {
+    margin: 20px 50px 100px 0;
+  }
+
+  .ProjectInfoLeft {
+    margin: 20px 0 100px 50px;
+  }
+
+  .ProjectTech {
+    width: 58px;
+  }
+
+  .Button {
+    margin: 50px 0 0 100px;
+    width: 200px;
+  }
+}
+
+@media all and (min-width: 890px) and (max-width: 1000px) {
+  .ProjectInfoRight {
+    margin: 20px 20px 100px 0;
+  }
+
+  .ProjectInfoLeft {
+    margin: 20px 0 100px 20px;
+  }
+
+  .ProjectTech {
+    width: 46px;
+  }
+
+  .Button {
+    margin: 50px 0 0 100px;
+    width: 200px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 890px) {
+  .ReverseWrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ProjectInfoRight {
+    margin: 20px 20px 100px 0;
+    text-align: center;
+  }
+
+  .ProjectInfoLeft {
+    margin: 20px 0 100px 30%;
+    text-align: center;
+  }
+
+  .ProjectTech {
+    width: 46px;
+    margin-left: 210px;
+  }
+
+  .Button {
+    margin: 50px 0 0 0px;
+    width: 200px;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .ReverseWrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ProjectImage{
+      width: 300px;
+  }
+
+  .ProjectInfoRight {
+    margin: 20px 20px 100px 0;
+    text-align: center;
+  }
+
+  .ProjectInfoLeft {
+    margin: 20px 0 100px 5%;
+    text-align: center;
+  }
+
+  .ProjectTech {
+    width: 50px;
+    margin-left: 80px;
+  }
+
+  .Button {
+    margin: 50px 0 0 0px;
+    width: 200px;
+  }
 }

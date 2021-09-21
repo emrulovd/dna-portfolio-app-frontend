@@ -18,7 +18,6 @@ export const fetchByIdProject = (id) => {
   return (dispatch) => {
     dispatch(projectActions.isLoading());
     axios.get(URL + id).then((response) => {
-      console.log(response.data)
       dispatch(projectActions.getOneProject(response.data.project));
     });
     dispatch(projectActions.isNotLoading());
@@ -27,21 +26,42 @@ export const fetchByIdProject = (id) => {
 
 export const addProject = (projectData) => {
   return (dispatch) => {
-    console.log(header);
     dispatch(projectActions.isLoading());
     axios.post(URL, projectData, { headers: header }).then((response) => {
-      console.log(response.data.message);
+      dispatch(projectActions.addProject(response.data.project));
     });
     dispatch(projectActions.isNotLoading());
   };
 };
 
+export const updateProject = (projectData, project_id) => {
+  return (dispatch) => {
+    axios
+      .put(URL + project_id, projectData, { headers: header })
+      .catch((error) => {
+        console.log(error.error);
+      });
+  };
+};
+
+export const deleteProject = (project_id) => {
+  return (dispatch) => {
+    axios
+      .delete(URL + project_id, { headers: header })
+      .then(() => {
+        dispatch(projectActions.deleteProject(project_id));
+      })
+      .catch((error) => {
+        console.log(error.error);
+      });
+  };
+};
 
 export const lazyLoading = () => {
-  return dispatch => {
+  return (dispatch) => {
     dispatch(projectActions.isLoading());
     setTimeout(() => {
       dispatch(projectActions.isNotLoading());
     }, 500);
-  }
-}
+  };
+};

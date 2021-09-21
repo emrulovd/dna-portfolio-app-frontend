@@ -37,7 +37,7 @@
 
 .ContentActive {
   transition: all 0.5s ease;
-  height: 100px;
+  height: 150px;
   text-align: center;
   border-bottom: 2px solid #000;
 }
@@ -47,4 +47,11 @@
   color: #fff;
   transition: all 1s ease;
   cursor: pointer;
+}
+
+
+@media all and (max-width: 768px){
+  .Accordion{
+    display: none;
+  }
 }

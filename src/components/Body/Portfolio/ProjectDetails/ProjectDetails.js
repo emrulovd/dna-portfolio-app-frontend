@@ -6,6 +6,9 @@ import { fetchByIdProject } from "../../../../store/actions/projects";
 
 import classes from "./ProjectDetails.module.css";
 import Spinner from "../../../UI/Spinner/Spinner";
+import ProjectOverview from "./ProjectOveview/ProjectOverview";
+import ProjectShowcase from "./ProjectShowcase/ProjectShowcase";
+import ProjectProcess from "./ProjectProcess/ProjectProcess";
 import ProjectTechnologies from "./ProjectTechnologies/ProjectTechnologies";
 import ProjectContact from "./ProjectContact/ProjectContact";
 const ProjectDetailsHeader = React.lazy(() =>
@@ -29,8 +32,11 @@ const ProjectDetails = () => {
         ) : (
           <Fragment>
             <ProjectDetailsHeader project={project} />
+            <ProjectOverview project={project}/>
+            <ProjectShowcase project={project}/>
+            <ProjectProcess/>
             <ProjectTechnologies project={project} />
-            <ProjectContact/>
+            <ProjectContact />
           </Fragment>
         )}
       </Suspense>

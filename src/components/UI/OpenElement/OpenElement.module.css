@@ -1,0 +1,59 @@
+
+
+@media all and (max-width: 1024px) {
+  .MenuButton {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 40px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    border: 2px solid #fff;
+  }
+  
+  .MenuButtonBurger{
+    margin: 0 3px 0 3px;
+    width: 32px;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .MenuButtonBurger::before,
+  .MenuButtonBurger::after{
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .MenuButtonBurger::before{
+    transform: translateY(-8px);
+  }
+  
+  .MenuButtonBurger::after{
+    transform: translateY(8px);
+  }
+  
+  .MenuButtonOpen .MenuButtonBurger{
+    transform: translateX(-25px);
+    background: transparent;
+    box-shadow: none;
+  } 
+  
+  .MenuButtonOpen .MenuButtonBurger::before{
+    transform: rotate(45deg) translate(17px, -17px);
+  } 
+  
+  .MenuButtonOpen .MenuButtonBurger::after{
+    transform: rotate(-45deg) translate(17px, 17px);
+  } 
+}

@@ -22,7 +22,7 @@ const ProjectItem = (props) => {
   return (
     <Fragment>
       {props.project_index % 2 === 1 ? (
-        <Fragment>
+        <div className={classes.ReverseWrapper}>
           <Col data-aos="fade-up">
             <div className={classes.ProjectInfoLeft}>
               <h4 className={classes.ProjectType}>{props.project_type}</h4>
@@ -57,7 +57,7 @@ const ProjectItem = (props) => {
               alt="..."
             />
           </Col>
-        </Fragment>
+        </div>
       ) : (
         <Fragment>
           <Col data-aos="fade-up">

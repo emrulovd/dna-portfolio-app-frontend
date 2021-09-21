@@ -208,3 +208,14 @@
     transition: 1s;
     transition-delay: 0.75s;
 }
+
+
+@media all and (max-width: 1024px){
+    .DynamicNavigationItems{
+        visibility: hidden;
+    }
+
+    .ActiveDynamicNavigationItems{
+        visibility: hidden;
+    }
+}

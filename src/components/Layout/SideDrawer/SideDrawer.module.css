@@ -1,0 +1,41 @@
+.SideDrawer{
+    height: 100%;
+    width: 0%;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    background-color: #2c2c2c;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+
+.NavigationItems{
+    padding-top: 70px;
+    text-align: center; 
+    list-style: none;
+}
+
+
+.NavigationItems li a{
+    padding: 8px 10px 10px 0px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+
+.NavigationItems li a:hover{
+    color: #f1f1f1;
+}
+
+
+@media all and (max-width: 1024px){
+    .SideDrawer{
+        width: 100%;
+    }
+}
