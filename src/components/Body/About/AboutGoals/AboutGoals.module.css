@@ -68,3 +68,58 @@
   text-align: justify;
   color: #707070;
 }
+
+
+
+@media all and (min-width: 768px) and (max-width: 1000px){
+
+  .ColRight2{
+    width: 54%;
+  }
+
+  .ColLeft{
+    width: 60%;
+  }
+
+  .TextRight {
+    margin: 0 0 10px 100px;
+  }
+
+  .TextLeft {
+    margin: 0px 50px 10px 0;
+  }
+}
+
+
+@media all and (max-width: 766px){
+  .Wrapper{
+    display: none;
+  }
+  .Title{
+    font-size: 24px;
+  }
+
+  .ColRight2{
+    width: 30%;
+  }
+
+  .ColLeft2{
+    width: 70%;
+  }
+
+  .ColLeft{
+    width: 60%;
+  }
+
+  .ColRight{
+    width: 60%;
+  }
+
+  .TextRight {
+    margin: 0 0 10px 0px;
+  }
+
+  .TextLeft {
+    margin: 0px 50px 10px 0;
+  }
+}

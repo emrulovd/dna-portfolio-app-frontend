@@ -4,14 +4,18 @@ import classes from "./ProjectOverview.module.css";
 const ProjectOverview = (props) => {
   return (
     <div className={classes.Wrapper}>
-      <h3 className={classes.Title}>{props.project.project_type}</h3>
+      <h3 className={classes.Title}>
+        <span className={classes.TextDecortion}>&lt;h3</span>
+        {props.project.project_type}
+        <span className={classes.TextDecortion}>/&gt;</span>
+      </h3>
       <div className={classes.InnerWrapper}>
         <Container>
           <Row>
             <Col>
               <img
                 className={classes.ProjectLogo}
-                src={props.project.project_image_collection[1]}
+                src={props.project.project_image_collection[2]}
                 alt="logo of the project presented"
               />
             </Col>
@@ -37,12 +41,25 @@ const ProjectOverview = (props) => {
                 electronic typesetting, remaining essentially unchanged.
               </p>
             </Col>
-            <Col>
-              <img
-                className={classes.ProjectLogo}
-                src={props.project.project_image_collection[1]}
-                alt="logo of the project presented"
-              />
+            <Col md={6}>
+              <div
+                className={classes.VideoWrapper}
+                style={{
+                  background: `url(${props.project.project_image_collection[4]})`,
+                  backgroundSize: "100% 100%",
+                  backgroundReapet: "no-repeat",
+                  width: "620px",
+                  height: "310px",
+                }}
+              >
+                <video
+                  className={classes.ProjectVideo}
+                  autoPlay
+                  loop
+                  muted
+                  src={props.project.project_image_collection[3]}
+                ></video>
+              </div>
             </Col>
           </Row>
         </Container>

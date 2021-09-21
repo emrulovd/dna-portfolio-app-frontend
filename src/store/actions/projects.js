@@ -18,7 +18,6 @@ export const fetchByIdProject = (id) => {
   return (dispatch) => {
     dispatch(projectActions.isLoading());
     axios.get(URL + id).then((response) => {
-      console.log(response.data);
       dispatch(projectActions.getOneProject(response.data.project));
     });
     dispatch(projectActions.isNotLoading());
@@ -29,19 +28,28 @@ export const addProject = (projectData) => {
   return (dispatch) => {
     dispatch(projectActions.isLoading());
     axios.post(URL, projectData, { headers: header }).then((response) => {
-      console.log(response.data.message);
+      dispatch(projectActions.addProject(response.data.project));
     });
     dispatch(projectActions.isNotLoading());
   };
 };
 
+export const updateProject = (projectData, project_id) => {
+  return (dispatch) => {
+    axios
+      .put(URL + project_id, projectData, { headers: header })
+      .catch((error) => {
+        console.log(error.error);
+      });
+  };
+};
+
 export const deleteProject = (project_id) => {
   return (dispatch) => {
-    dispatch(projectActions.isLoading());
     axios
       .delete(URL + project_id, { headers: header })
-      .then((response) => {
-        console.log(response.data.message);
+      .then(() => {
+        dispatch(projectActions.deleteProject(project_id));
       })
       .catch((error) => {
         console.log(error.error);

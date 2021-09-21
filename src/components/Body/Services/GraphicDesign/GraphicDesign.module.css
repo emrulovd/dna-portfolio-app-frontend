@@ -23,3 +23,30 @@
 .Text{
     margin: 70px 0 50px 0; 
 }
+
+
+@media all and (min-width: 768px) and (max-width: 1000px) {
+    .Badge{
+        height: 120px;
+    }
+}
+
+
+@media all and (max-width: 768px){
+    .Wrapper{
+        height: 100%;
+    }
+
+    .Badge{
+        margin: 40px auto;
+    }
+
+    .Line{
+        display: none;
+    }
+
+    .Text{
+        text-align: justify;
+        margin: 0 0 40px 0;
+    }
+}

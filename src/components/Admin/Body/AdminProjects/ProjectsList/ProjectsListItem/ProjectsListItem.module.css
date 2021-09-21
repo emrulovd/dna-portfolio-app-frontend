@@ -1,16 +1,31 @@
-.Image{
-    width: 128px;
+.Image {
+  width: 128px;
 }
 
-.Title{
-    text-align: center;
+.Title {
+  text-align: center;
 }
 
-.ButtonUpdate{
-    
-
+.Button {
+  border: 1px solid #000;
+  background: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-family: "Audiowide", cursive;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color 0.4s linear;
+  position: relative;
 }
 
-.ButtonDelete{
- 
+.ButtonUpdate:hover {
+  color: #fff;
+  background: rgb(3, 82, 29);
+  transition: color 0.4s linear;
+}
+
+.ButtonDelete:hover {
+  color: #fff;
+  background: rgb(105, 2, 2);
+  transition: color 0.4s linear;
 }

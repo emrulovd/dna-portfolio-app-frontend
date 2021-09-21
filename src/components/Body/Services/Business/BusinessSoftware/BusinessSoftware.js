@@ -1,7 +1,6 @@
 import { Fragment } from "react";
 import { Row, Col } from "react-bootstrap";
 
-import classes from "./BusinessSoftware.module.css";
 
 import Accordion from "../../../../UI/Accordion/Accordion";
 

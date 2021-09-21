@@ -27,5 +27,31 @@
     transition: all 1s;
     width: 44px;
     height: 44px;
-    margin:  5px 265px 0 365px;
+    margin:  5px 15% 0 24%;
+}
+
+.OpenElementPosition{
+    margin: 5px 0 0 5px ; 
+}
+
+@media all and (min-width: 1200px) and (max-width: 1350px){
+    .NavLogo{
+        margin: 5px 10% 0 20%;
+    }
+}
+
+@media all and (min-width: 1024px) and (max-width: 1200px){
+    .NavLogo{
+        margin: 5px 5% 0 10%;
+    }
+}
+
+@media all and (max-width: 1024px){
+    .OpenElementPosition{
+        margin: 5px 0 0 30px;
+    }
+
+    .NavLogo{
+        visibility: hidden;
+    }
 }

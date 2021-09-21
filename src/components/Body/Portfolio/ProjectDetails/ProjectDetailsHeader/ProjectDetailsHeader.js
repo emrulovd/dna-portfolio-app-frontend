@@ -5,7 +5,7 @@ const ProjectDetailsHeader = (props) => {
     <div
       className={classes.Wrapper}
       style={{
-        background: `url(${props.project.project_image_collection[0]})`,
+        background: `url(${props.project.project_image_collection[1]})`,
         backgroundSize: "100% 100%",
         backgroundReapet: 'no-repeat'
       }}

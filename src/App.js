@@ -25,6 +25,7 @@ import Spinner from "./components/UI/Spinner/Spinner";
 function App() {
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
   const isLoading = useSelector((state) => state.project.isLoading);
+  const isOpen = useSelector((state) => state.drawer.isOpen)
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -43,7 +44,7 @@ function App() {
           {isAuthenticated && <Route path="/admin" component={Admin} />}
           <Route path="" exact>
             <Header />
-            <SideDrawer/>
+            {isOpen && <SideDrawer/>}
             <main>
               <Switch>
                 <Route path="/portfolio/project/:id" component={ProjectDetails}/>

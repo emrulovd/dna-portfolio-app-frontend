@@ -19,3 +19,26 @@
 .Badge img {
   width: 60px;
 }
+
+
+
+@media all and (max-width: 580px) {
+  .Badge img{
+    width: 0px;
+    display:none;
+  }
+
+  .Badge{
+    display:none;
+    margin-left: 0;
+  }
+
+  .TitleBadgesItem{
+    display:none;
+    padding-left:0px;
+  }
+
+  .TitleBadges{
+    display:none;
+  }
+}

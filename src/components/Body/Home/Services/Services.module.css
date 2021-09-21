@@ -1,28 +1,55 @@
-.Wrapper{
-    height: 45vh;
-    width: 100%;
-    background: url('../../../../assets/backgrounds/home/background-home-development.png');
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    color: #000;
+.Wrapper {
+  height: 45vh;
+  width: 100%;
+  background: url("../../../../assets/backgrounds/home/background-home-development.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  color: #000;
 }
 
-.TextDecortion{
-    color: red;
-    font-size: 12;
-    font-weight: lighter;
-}   
-
-
-.Title{
-    text-align: center;
-    font-family: 'Audiowide', cursive;
-    text-transform: uppercase;
-    padding: 50px 0 50px 0;
+.TextDecortion {
+  color: red;
+  font-size: 12;
+  font-weight: lighter;
 }
 
-.Icon{
-    display: block;
-    margin: auto;
-    height: 140px;
+.Title {
+  text-align: center;
+  font-family: "Audiowide", cursive;
+  text-transform: uppercase;
+  padding: 50px 0 50px 0;
+}
+
+.Icon {
+  display: block;
+  margin: auto;
+  height: 140px;
+}
+
+@media all and (min-width: 1000px) and (max-width: 1150px) {
+  .Icon {
+    height: 120px;
+  }
+}
+
+@media all and (min-width: 800px) and (max-width: 1000px) {
+  .Icon {
+    height: 100px;
+  }
+}
+
+@media all and (max-width: 800px) {
+  .Wrapper {
+    height: 100%;
+  }
+
+  .Title {
+    font-size: 24px;
+    padding: 50px 0 25px 0;
+  }
+
+  .Icon {
+    height: 120px;
+    padding-bottom: 20px; 
+  }
 }

@@ -1,6 +1,10 @@
 .Wrapper{
-    height: 100vh; 
+    height: 100%;
     width: 100%;
+}
+
+.RowWrapper{
+    margin: 100px;
 }
 
 .Title{
@@ -9,18 +13,10 @@
     text-transform: uppercase;
 }
 
-
 .TextDecortion{
     color: red;
 }
 
-.Text{
-    margin: 100px 0 0 50px;
-
-}
-
-.Image{
-    display: block;
-    margin: 50px auto;
+.Video{
     width: 600px;
 }

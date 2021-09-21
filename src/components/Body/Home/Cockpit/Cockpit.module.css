@@ -1,48 +1,75 @@
-.Cockpit{
-    height: 100vh;
-    width: 100%;
+.Cockpit {
+  height: 100vh;
+  width: 100%;
 }
 
-
-.Cockpit video{
-    position: relative;
-    width: 100%;
-    z-index: 0;
-}
-
-.Overlay{
-    position:absolute;
-    top: 35%;
+.Cockpit video {
+    position: absolute;
+    z-index: -1;
+    top: 0;
     left: 0;
-    width: 100%;
-    height: 80%;
-    z-index:1;
-    background: linear-gradient(transparent, #000);
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
 }
 
-.TextWrapper{
-    margin: 200px 7% 0 0 ;
-    float: right;
+.Overlay {
+  position: absolute;
+  top: 35%;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  z-index: 1;
+  background: linear-gradient(transparent, #000);
 }
 
-.Title{
-    font-family: 'Audiowide', cursive;
-    text-transform: uppercase;
-    color: #fff;
+.TextWrapper {
+  margin: 200px 7% 0 0;
+  float: right;
 }
 
-.Text{
-    font-family: 'Audiowide', cursive;
-    text-transform: uppercase;
-    color: #fff;
-} 
-
-.Button_Learn{
-    margin: 50px 0px 0 85px;
-    width: 40%;
+.Title {
+  font-family: "Audiowide", cursive;
+  text-transform: uppercase;
+  color: #fff;
 }
 
-.Button_Contact{
-    margin: 50px 0px 0 350px;
-    width: 14%;
+.Text {
+  font-family: "Audiowide", cursive;
+  text-transform: uppercase;
+  color: #fff;
 }
+
+.Button_Learn {
+  margin: 50px 0px 0 85px;
+  width: 40%;
+}
+
+.Button_Contact {
+  margin: 50px 0px 0 350px;
+  width: 14%;
+}
+
+@media all and (min-width: 1200px) and (max-width: 1350px) {
+  .Cockpit video {
+    height: 100%;
+  }
+
+  .TextWrapper {
+    margin: 150px 2% 0 0;
+  }
+
+  .Button_Contact {
+    width: 17%;
+  }
+}
+
+@media all and (max-width: 1200px) {
+  .Overlay {
+    visibility: hidden;
+    top: 0;
+    height: 0;
+    width: 0;
+  }
+}
+

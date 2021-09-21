@@ -19,7 +19,7 @@ const AdminProjects = () => {
       <h1 className={classes.Title}>Projects</h1>
       <Switch>
         <Route path="/admin/projects/edit" exact>
-          <CreateProject/>
+          <CreateProject projects={projects}/>
         </Route>
         <Route path="/admin/projects/" exact>
           <ProjectsList projects={projects} navigateToCreatHandler = {navigateToCreatHandler}/>

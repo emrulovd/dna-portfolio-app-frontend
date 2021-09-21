@@ -24,3 +24,33 @@
     margin: auto;
     height: 126px;
 }
+
+@media all and (min-width: 768px) and (max-width: 1000px) {
+    .RowWrapper{
+        margin-left: 10%;
+    }
+
+    .Badge{
+        height: 100px;
+    }
+}
+
+
+@media all and (max-width: 768px){
+
+    .Wrapper{
+        height: 20vh;
+    }
+
+    .Title{
+        font-size: 24px;
+    }
+
+    .TextDecoration{
+        font-size: 12px;
+    }
+
+    .RowWrapper{
+        display: none;
+    }
+}
